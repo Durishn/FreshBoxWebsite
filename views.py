@@ -1,8 +1,8 @@
 from pyramid.view import view_config
 
 from dummy_data import COMPANY
-from dummy_data import PEOPLE
-from dummy_data import PROJECTS
+from dummy_data import GetUsers
+#from dummy_data import PROJECTS
 
 from layouts import Layouts
 
@@ -16,7 +16,7 @@ class ProjectorViews(Layouts):
         return {"page_title": "Home"}
 
     @view_config(renderer="templates/company.pt",
-                 name="acme")
+                 name="contact")
     def company_view(self):
         return {"page_title": COMPANY + " Projects",
-                "projects": PROJECTS}
+                "users": GetUsers()}
