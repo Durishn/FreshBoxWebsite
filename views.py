@@ -1,7 +1,7 @@
 from pyramid.view import view_config
 
 from dummy_data import COMPANY
-from dummy_data import GetUsers
+from dummy_data import getUsers
 #from dummy_data import PROJECTS
 
 from layouts import Layouts
