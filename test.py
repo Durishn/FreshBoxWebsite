@@ -5,16 +5,22 @@ from pyramid.config import Configurator
 from dummy_data import getUsers
 from dummy_data import userExists
 from dummy_data import addUser
+from dummy_data import authUser
+from dummy_data import getUser
 
 import psycopg2
 
 if __name__ == '__main__':
-	#print(getUsers())
 	
 	#print(userExists("jon@gfb.com"))
 	
-	print(addUser(1, "Nic@gfb.com", "password", "Nic", "Durish", "555-555-5555", None))
+	#print(addUser(1, "example@gfb.com", "password", "Example", "Dude", "000-000-0000", None))
 	
+	#print(authUser("jon@gfb.com", "password"))
+	
+	#print(getUsers())
+	
+	print(getUser("jon@gfb.com"))
 
 def Example():
 

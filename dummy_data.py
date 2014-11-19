@@ -3,31 +3,13 @@ from pyramid.config import Configurator
 
 import psycopg2
 
-def Example():
-	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
-
-	cur = conn.cursor()
-
-	cur.execute("SELECT * from public.\"Things\"")
-
-	rows = cur.fetchall()
-
-
 COMPANY = "Garden Fresh Box"
 
-def getUsers():
-	returnVal = []
-	
+def Example():
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("SELECT first_name from public.\"Users\"")
+	cur.execute("SELECT * from public.\"Things\"")
 	rows = cur.fetchall()
-
-	for row in rows:
-		user = {'first_name': row[0]}
-		returnVal.append(user);
-	
-	return returnVal
 
 # userExists 
 #
@@ -76,6 +58,88 @@ def addUser(credentials, email, password, firstName, lastName, phoneNumber, host
 	conn.commit();
 	return userExists(email)
 	
+# authUser
+#
+#  Authenticate the users account
+#  		
+#  Check if the given password for a user matches what's in 
+#  		the database for them
+# 
+#  email -
+#  password -
+#  @return - true if auth is valid, false otherwise
+def authUser(email, password):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("SELECT email, password FROM public.\"Users\"")
+	rows = cur.fetchall()
+	for row in rows:
+		if email == row[0]:
+			return password == row[1]
+	return false
+	
+# updateUser
+#  
+#  Update user information for a given account.
+# 
+#  email - The email for the user that's in the database
+#  newEmail - (optional) the new email the user should have
+#  newPassword - (optional) the new password the user should have
+#  newFirstName - (optional
+#  newLastName - (optional)
+#  newPhoneNumber - (optional)
+#  hostSites - (optional) a list of hostSiteIDs associated with the   
+#  			account, this is ONLY for coordinator accounts
+#  credentials - (optional) if no credentials provided, no change 
+#  			made
+#  @return - true if the user existed and information was
+#        	successfully updated, false otherwise
+def updateUser(email, newEmail, newPassword, newFirstName, newLastName, newPhoneNumber, hostSites, credentials):
+	#TODO all
+	return false
+	
+# getUsers
+# 
+#  Lets administrators get a list of all user accounts in the 
+# 		database
+#	Returns an array of dictionaries, each dictionary corresponds to
+#	a User row.
+#
+#  @ return Array.<Dictionar> an array of dictionaries, each 
+#  			dictionary corresponds to a user account
+#  			MUST include ALL user information given by the 
+#			database schema above BUT NOT the plaintext password
+def getUsers():
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("SELECT u.email, u.first_name, u.last_name, u.phone_number, c.label from public.\"Users\" u INNER JOIN public.\"Credentials\" c on c.id = u.\"credentials_idFK\"")
+	rows = cur.fetchall()
+
+	dictionary = []
+	for row in rows:
+		user = {'email': row[0], 'first_name': row[1], 'last_name': row[2], 'phone_number': row[3], 'credentials': row[4]}
+		dictionary.append(user);
+	return dictionary
+	
+# getUser
+#  
+#  getUser information that we will need since after login all the 
+# 		system has is the email used to login (which you should 
+#		cache somewhere) and the credential level
+#
+#  @return - Dictionary, the dictionary value corresponding to the 
+#			 user email given.
+#  			MUST include ALL user information given by the 
+#			database schema above BUT NOT the plaintext password
+def getUser(email):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("SELECT u.email, u.first_name, u.last_name, u.phone_number, c.label from public.\"Users\" u INNER JOIN public.\"Credentials\" c on c.id = u.\"credentials_idFK\" WHERE u.email = \'" + email + "\'")
+	rows = cur.fetchall()
+	
+	if len(rows) == 1:
+		return {'email': rows[0][0], 'first_name': rows[0][1], 'last_name': rows[0][2], 'phone_number': rows[0][3], 'credentials': rows[0][4]}
+	return None
 	
 SITE_MENU = [
         {'href': '', 'title': 'Home'},
