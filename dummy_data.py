@@ -172,7 +172,9 @@ def addHostSite(name, address, city, province, hoursOfOperation):
 	
 def getMenu(self):
 
-    retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': COMPANY}, {'href':'test_ajax', 'title':'AJAX Test'}]
+    retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}
+	, {'href':'test_ajax', 'title':'AJAX Test'}
+	]
 
     if('userType' in self.request.session):
         if(self.request.session['userType'] == 'none'):
