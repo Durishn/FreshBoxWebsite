@@ -1,0 +1,59 @@
+
+h1 {
+	margin-left:100px;
+	margin-right:100px;
+	text-align:center;
+	padding:15px;
+}
+
+p {
+	font-size:1.125em;
+}
+
+img.center {
+	display:inline;
+    margin-left: -20px;
+    margin-right: auto;
+	width:20em;
+	padding-bottom:15px;
+}
+
+a.main:hover {
+	color:red;
+}
+
+
+/*table, td, th {
+	background-color:white;
+	border:1px solid green;
+}
+
+th {
+	padding:10px;
+	color:white;
+	background-color:green;
+} */
+
+div.information {
+	padding:25px;
+	border:20px outset green;
+}
+
+div.container {
+	font-family:'Roboto', sans-serif;
+	background-color:white;
+}
+
+span.title {
+	font-family:'Roboto', sans-serif;
+	font-size:4em;
+	text-align:right;
+}
+
+.nav-pills > li.active > a {
+    background-color:#27ae60 !important;
+}
+
+.nav-pills > li > a {
+	color:#27ae60;
+}
