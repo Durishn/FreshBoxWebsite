@@ -7,6 +7,7 @@ from dummy_data import userExists
 from dummy_data import addUser
 from dummy_data import authUser
 from dummy_data import getUser
+from dummy_data import addHostSite
 
 import psycopg2
 
@@ -20,7 +21,9 @@ if __name__ == '__main__':
 	
 	#print(getUsers())
 	
-	print(getUser("jon@gfb.com"))
+	#print(getUser("jon@gfb.com"))
+	
+	print(addHostSite("Example Host Site 3", "", "", "", ""))
 
 def Example():
 

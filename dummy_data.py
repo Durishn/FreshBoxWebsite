@@ -141,7 +141,36 @@ def getUser(email):
 		return {'email': rows[0][0], 'first_name': rows[0][1], 'last_name': rows[0][2], 'phone_number': rows[0][3], 'credentials': rows[0][4]}
 	return None
 	
-SITE_MENU = [
-        {'href': '', 'title': 'Home'},
-        {'href': 'contact', 'title': COMPANY},
-]
+# addHostSite
+#
+#  Add a new host site
+#
+#  name - the name of the new host site
+#  address - the street number, apartment number and street name 
+#  city - city in which the host site is
+#  province - what province is it
+#  coordinatorIDs - (optional) an up to date list of all 
+#			coordinators associated with the host site
+#  hoursOfOperation - (optional) A dictionary where the key is the 
+#				day of the week and the value is a string which 
+#				looks like: "open,close" and each open and 
+#				close are in 24 hour time (4 digit number: 1200 
+#				is noon for example), you are responsible 
+#				for storing these values.
+#  
+#  @return - true if successful database entry, false otherwise
+def addHostSite(name, address, city, province, hoursOfOperation):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("INSERT INTO public.\"HostSites\" (name) VALUES (\'" + name + "\')")
+	
+	user = getUser
+	
+	#TODO: this method should accept a list of coordinators to add to this host site
+	#cur.execute("INSERT INTO public.\"CoordinatorHostSiteRel\" (\"user_idFK\", \"hostsite_idFK\") VALUES (\'" + name + "\'")
+	#insert into public."CoordinatorHostSiteRel" ("user_idFK", "hostsite_idFK") values (9,2);
+	conn.commit();
+	return None
+	
+def getMenu():
+	return [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': COMPANY} ]

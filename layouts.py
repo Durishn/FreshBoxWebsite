@@ -2,7 +2,7 @@ from pyramid.renderers import get_renderer
 from pyramid.decorator import reify
 
 from dummy_data import COMPANY
-from dummy_data import SITE_MENU
+from dummy_data import getMenu
 
 class Layouts(object):
 
@@ -17,7 +17,7 @@ class Layouts(object):
 
     @reify
     def site_menu(self):
-        new_menu = SITE_MENU[:]
+        new_menu = getMenu()[:]
         url = self.request.url
         for menu in new_menu:
             if menu['title'] == 'Home':
