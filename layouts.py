@@ -17,7 +17,7 @@ class Layouts(object):
 
     @reify
     def site_menu(self):
-        new_menu = getMenu()[:]
+        new_menu = getMenu(self)[:]
         url = self.request.url
         for menu in new_menu:
             if menu['title'] == 'Home':

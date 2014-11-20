@@ -1,0 +1,16 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <p>User: admin , Password: pass</p>
+        <form method='POST'>
+            <span>Username:</span>
+            <br>
+            <input type='text' name='username'>
+            <br>
+            <span>Password:</span>
+            <br>
+            <input type='text' name='password'>
+            <br>
+            <input type='submit' value='Submit'>
+        </form>
+    </div>
+</div>

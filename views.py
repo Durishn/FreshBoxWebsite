@@ -1,7 +1,9 @@
 from pyramid.view import view_config
+from pyramid.httpexceptions import HTTPFound
 
 from dummy_data import COMPANY
 from dummy_data import getUsers
+from dummy_data import userType
 #from dummy_data import PROJECTS
 
 from layouts import Layouts
@@ -20,3 +22,19 @@ class ProjectorViews(Layouts):
     def company_view(self):
         return {"page_title": COMPANY + " Projects",
                 "users": GetUsers()}
+                
+    @view_config(renderer="templates/login.pt",
+                name="login")
+    def login_view(self):
+        username = self.request.POST.get('username')
+        password = self.request.POST.get('password')
+        self.request.session['userType'] = userType(username,password)
+        if(userType(username,password) == 'admin'):
+            return HTTPFound(location='/')
+        return {"page_title": "Login"}
+    
+    @view_config(renderer="templates/index.pt",
+                name="logout")
+    def logout_view(self):
+        self.request.session['userType'] = 'none'
+        return HTTPFound(location='/')

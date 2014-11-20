@@ -1,9 +1,11 @@
 from wsgiref.simple_server import make_server
-
+from pyramid.session import SignedCookieSessionFactory
 from pyramid.config import Configurator
 
 def main():
+    my_session_factory = SignedCookieSessionFactory('C8TWB9q1H16jkFCThU4i')
     config = Configurator()
+    config.set_session_factory(my_session_factory)
     config.include('pyramid_chameleon')
     config.scan("views")
     config.add_static_view('static', 'static/',
