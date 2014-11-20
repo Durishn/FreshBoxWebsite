@@ -1,7 +1,6 @@
 from pyramid.renderers import get_renderer
 from pyramid.decorator import reify
 
-from dummy_data import COMPANY
 from dummy_data import getMenu
 
 class Layouts(object):

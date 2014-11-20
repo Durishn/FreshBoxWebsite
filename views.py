@@ -1,7 +1,6 @@
 from pyramid.view import view_config
 from pyramid.httpexceptions import HTTPFound
 
-from dummy_data import COMPANY
 from dummy_data import getUsers
 from dummy_data import userType
 #from dummy_data import PROJECTS
@@ -20,8 +19,7 @@ class ProjectorViews(Layouts):
     @view_config(renderer="templates/company.pt",
                  name="contact")
     def company_view(self):
-        return {"page_title": COMPANY + " Projects",
-                "users": GetUsers()}
+        return {"page_title": "Contact Us"}
                 
     @view_config(renderer="templates/login.pt",
                 name="login")
