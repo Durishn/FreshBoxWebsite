@@ -36,3 +36,11 @@ class ProjectorViews(Layouts):
     def logout_view(self):
         self.request.session['userType'] = 'none'
         return HTTPFound(location='/')
+    
+    @view_config(renderer='templates/test_ajax.pt', name='test_ajax')
+    def test_ajax(self):
+        return {"page_title": "Test AJAX"}
+        
+    @view_config(renderer='json', name='test.json')
+    def test_json(self):
+        return {"data":"This is an AJAX call"}
