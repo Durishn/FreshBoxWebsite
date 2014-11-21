@@ -41,3 +41,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+dummy_data.py
+__pycache__/layouts.cpython-34.pyc
+__pycache__/views.cpython-34.pyc
+__pycache__/dummy_data.cpython-34.pyc
+dummy_data.py
+dummy_data.py
