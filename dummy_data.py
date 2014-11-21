@@ -3,8 +3,6 @@ from pyramid.config import Configurator
 
 import psycopg2
 
-COMPANY = "Garden Fresh Box"
-
 def Example():
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
@@ -172,5 +170,27 @@ def addHostSite(name, address, city, province, hoursOfOperation):
 	conn.commit();
 	return None
 	
-def getMenu():
-	return [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': COMPANY} ]
+def getMenu(self):
+
+    retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}
+	, {'href':'test_ajax', 'title':'AJAX Test'}
+	]
+
+    if('userType' in self.request.session):
+        if(self.request.session['userType'] == 'none'):
+            retVal.append({'href':'login','title': 'Login'});
+        else:
+            retVal.append({'href':'logout','title': 'Logout'});
+    else:
+        retVal.append({'href':'login','title': 'Login', 'style':''});
+    return retVal
+    
+def userType(user,password):
+    #if(user == 'admin' and password == 'pass'):
+	if (userExists(user)):
+		if (authUser(user, password)):
+			if (getUser(user)['credentials'] == 'Administrator'):
+				return "admin"
+			elif (getUser(user)['credentials'] == 'Coordinator'):
+				return "coord"
+	return "none";
