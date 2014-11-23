@@ -22,18 +22,6 @@ a.link {
 	color:#27ae60 !important;
 }
 
-
-/*table, td, th {
-	background-color:white;
-	border:1px solid green;
-}
-
-th {
-	padding:10px;
-	color:white;
-	background-color:green;
-} */
-
 div.information {
 	padding:25px;
 	border:20px outset green;
@@ -56,5 +44,26 @@ span.title {
 }
 
 .jumbotron {
+	float:left;
+	width:100%;
 	background-color: #2ecc71 !important;
+}
+
+.resize-video {
+	float:right;
+	width:50%;
+	padding:10px;
+}
+
+#home-image {
+	float:right;
+	width:50%;
+}
+
+button.login {
+	float:right;
+}
+
+.pad-input {
+	margin-right:800px !important;
 }
