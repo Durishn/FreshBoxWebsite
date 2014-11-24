@@ -112,7 +112,30 @@ Author: Nic Durish
                         </div>
                     </div><h5><a href="#">Separated link</a></h5>
                 </div>
-                <a class="btn btn-info btn-lg" href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CKG83L4ECD2RG" target="_blank" role="button">Pay with PayPal</a>
+
+                <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="N2Z4GER6QKJ34">
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="hidden" name="on0" value="Garden Fresh Box">Garden Fresh Box</td></tr><tr><td>
+                                    <select name="os0">
+                                        <option value="Small">Small $15.00 CAD</option>
+                                        <option value="Large">Large $20.00 CAD</option>
+                                    </select>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <input type="hidden" name="currency_code" value="CAD">
+                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    
+
+                    <a class="btn btn-info btn-lg" name="submit" alt="PayPal - The safer, easier way to pay online!" target="_blank" role="button">Pay with PayPal</a>
+                </form>
+
+               
             </div>
 
 
