@@ -3,6 +3,12 @@ address {
 }
 
 body {
+  background-color: #ecf0f1 !important;
+}
+
+div.container {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
