@@ -12,6 +12,25 @@ div.container {
   font-family: 'Roboto', sans-serif;
 }
 
+h5 {
+  font-size: 17px !important;
+}
+
+table {
+  max-width: 400px !important;
+  margin: 0 auto;
+}
+
+th {
+  text-align: center;
+  font-size: 14px;
+}
+
+td{
+  font-size: 11px;
+  padding: 1px;
+}
+
 span.input-group-addon {
   width:125px;
 }
@@ -48,10 +67,6 @@ span.input-group-addon {
           box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
-}
-
-.form-control.store {
-  min-width: 450px
 }
 
 .form-signin .form-control:focus {
@@ -126,6 +141,18 @@ span.input-group-addon {
 	  background-color: #82E0AA !important;
 }
 
+.jumbobotter {
+    margin-bottom: 1px !important;
+    background-color: #82E0AA !important;
+}
+
+.jumbofloor {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 1px !important;
+    background-color: #ABEBC6 !important;
+}
+
 .left {
   text-align: left;
 }
@@ -144,6 +171,14 @@ span.input-group-addon {
 .well.GFB {
   background-color: #25A35A;
   border-color: #1C7A44;
+}
+
+.well.GFB.box-table {
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: #25A35A;
+  border-color: #1C7A44;
+  margin-bottom: 5px;
 }
 
 .sponsor {
