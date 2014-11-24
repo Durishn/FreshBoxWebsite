@@ -7,14 +7,15 @@ body {
 }
 
 div.container {
+  padding-left: 20px;
+  padding-right: 40px;
   background-color: white;
   font-family: 'Roboto', sans-serif;
 }
 
-h1 {
-}
-
-p {
+.contact-field {
+  padding: 5px;
+  margin: 0 auto;
 }
 
 .footer {
@@ -76,58 +77,60 @@ p {
     -moz-osx-font-smoothing: grayscale
 }
 
+.input-group-addon {
+  width:95px;
+}
+
+.jumboGFB {
+  color: inherit;
+  text-align: center;
+  background-color: #2ecc71 !important;
+  margin-bottom: 2px !important;
+  margin-top: 2px !important;
+}
+
+.jumbocont {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.jumbolog {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
 .jumbotop {
-    padding: 10px;
-    margin-top: 75px;
-    color: inherit;
-    text-align: center;
-	background-color: #2ecc71 !important;
-}
-
-.contacts {
-    padding: 10px;
-    color: inherit;
-    text-align: center;
-    max-width: 700px;
-	margin: 0 auto;
-	margin-top: 75px;
-	background-color: #2ecc71 !important;
-}
-
-.jumbocent {
-    padding: 10px;
-    margin-top: 75px;
-    color: inherit;
-	background-color: #2ecc71 !important;
+    margin-top: 60px !important;
 }
 
 .jumbomid {
-    padding: 10px;
-    color: inherit;
-    text-align: center;
-    max-width: 550px;
-	margin: 0 auto;
-	background-color: #58D68D !important;
+    max-width: 800px;
+	  margin: 0 auto !important;
+    margin-bottom: 2px !important;
+	  background-color: #58D68D !important;
 }
 
 .jumbobot {
-    padding: 10px;
-    color: inherit;
-    text-align: center;
-    max-width: 700px;
-	margin: 0 auto;
-	background-color: #82E0AA !important;
+    max-width: 550px;
+	  margin: 0 auto;
+    margin-bottom: 2px !important;
+	  background-color: #82E0AA !important;
 }
 
-.jumbobut {
-	border:1px solid green !important;
-	background-color:#27ae60 !important;
+.jumbosquish {
+  max-width: 800px;
+  margin: 0 auto !important;
+  margin-bottom: 2px !important;
 }
 
-.login {
-	max-width: 500px;
-	margin: 0 auto;
-	margin-top: 30px;
+.left {
+  text-align: left;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
 }
 
 .resize-video {
