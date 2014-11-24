@@ -74,10 +74,14 @@ Author: Nic Durish
         <!-- Main Page Content -->
         <div class="container theme-showcase" role="main">
             <div class="jumbotron jumbosquish jumboGFB jumbotop  ">
-                
+                <h2> Get a Box!<h2>
             </div>
 
             <div class="jumbotron jumbosquish jumboGFB jumbomid ">
+                <div class="well GFB">
+                    <h3> Product Information:<h3>
+                    
+                </div>
                 <div class="well GFB">
                     <h3> Contact Information:<br><small>*Optional Fields</small><h3>
                     <div class="input-group contact-field">
@@ -102,7 +106,7 @@ Author: Nic Durish
                     <div class="input-group contact-field">
                         <input type="text" class="form-control store">
                         <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action <span class="caret"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Host-Sites<span class="caret"></span></button>
                             <ul class="dropdown-menu dropdown-menu-right" role="menu">
                                 <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
@@ -110,7 +114,7 @@ Author: Nic Durish
                                 <li class="divider"></li>   
                             </ul>
                         </div>
-                    </div><h5><a href="#">Separated link</a></h5>
+                    </div><h5><a href="#">Find the Host-Site closest to you!</a></h5>
                 </div>
 
                 <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
@@ -119,7 +123,7 @@ Author: Nic Durish
                     <table>
                         <tr>
                             <td>
-                                <input type="hidden" name="on0" value="Garden Fresh Box">Garden Fresh Box</td></tr><tr><td>
+                                
                                     <select name="os0">
                                         <option value="Small">Small $15.00 CAD</option>
                                         <option value="Large">Large $20.00 CAD</option>
@@ -127,12 +131,7 @@ Author: Nic Durish
                             </td>
                         </tr>
                     </table>
-
-                    <input type="hidden" name="currency_code" value="CAD">
-                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    
-
-                    <a class="btn btn-info btn-lg" name="submit" alt="PayPal - The safer, easier way to pay online!" target="_blank" role="button">Pay with PayPal</a>
+                    <button type="submit" class="btn btn-info btn-lg" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">Pay with PayPal</button>
                 </form>
 
                
