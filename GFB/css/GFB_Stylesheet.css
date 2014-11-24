@@ -50,7 +50,7 @@ span.input-group-addon {
   font-size: 16px;
 }
 
-.form-control {
+.form-control.store {
   min-width: 450px
 }
 
@@ -97,19 +97,20 @@ span.input-group-addon {
   margin-top: 1px !important;
 }
 
-.jumbocont {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 .jumbolog {
   max-width: 500px;
   margin: 0 auto;
   margin-top: 30px;
 }
 
+.jumbosquish {
+  max-width: 800px;
+  margin: 0 auto !important;
+}
+
 .jumbotop {
     margin-top: 60px !important;
+    margin-bottom: 1px !important;
 }
 
 .jumbomid {
@@ -125,12 +126,6 @@ span.input-group-addon {
 	  background-color: #82E0AA !important;
 }
 
-.jumbosquish {
-  max-width: 800px;
-  margin: 0 auto !important;
-  margin-bottom: 1px !important;
-}
-
 .left {
   text-align: left;
 }
@@ -144,6 +139,11 @@ span.input-group-addon {
 	max-width:600px;
 	padding:10px;
 	margin: 0 auto;
+}
+
+.well.GFB {
+  background-color: #25A35A;
+  border-color: #1C7A44;
 }
 
 .sponsor {
