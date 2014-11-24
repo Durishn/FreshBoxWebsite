@@ -18,8 +18,18 @@ img.center {
 	padding-bottom:15px;
 }
 
+.center {
+	padding-top:20px;
+	padding-left:30%;
+	padding-bottom:40px;
+}
+
 a.link {
 	color:#27ae60 !important;
+}
+
+a > button {
+	color:#7f8c8d !important;
 }
 
 div.information {
@@ -51,8 +61,8 @@ span.title {
 
 .resize-video {
 	float:right;
-	width:50%;
-	padding:10px;
+	width:100%;
+	padding-bottom:100px;
 }
 
 #home-image {
@@ -64,6 +74,31 @@ button.login {
 	float:right;
 }
 
-.pad-input {
-	margin-right:800px !important;
+body {
+	background-color:#ecf0f1 !important;
+	padding-bottom:50px;
+	padding-top:10px;
 }
+
+form.align > input, select {
+	width:50%;
+}
+
+form.align > label {
+	width:100px;
+}
+
+/* For the login.html page */
+
+
+.input-group {
+	width:50%;
+}
+
+/* Footer for all pages */
+
+footer {
+	color:green;
+}
+
+
