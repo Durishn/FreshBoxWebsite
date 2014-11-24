@@ -1,0 +1,138 @@
+address {
+	font-size: 20px
+}
+
+body {
+}
+
+h1 {
+}
+
+p {
+}
+
+.footer {
+	text-align: center;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.jumbotop {
+    padding: 10px;
+    margin-top: 75px;
+    color: inherit;
+    text-align: center;
+	background-color: #2ecc71 !important;
+}
+
+.contacts {
+    padding: 10px;
+    color: inherit;
+    text-align: center;
+    max-width: 700px;
+	margin: 0 auto;
+	margin-top: 75px;
+	background-color: #2ecc71 !important;
+}
+
+.jumbocent {
+    padding: 10px;
+    margin-top: 75px;
+    color: inherit;
+	background-color: #2ecc71 !important;
+}
+
+.jumbomid {
+    padding: 10px;
+    color: inherit;
+    text-align: center;
+    max-width: 550px;
+	margin: 0 auto;
+	background-color: #58D68D !important;
+}
+
+.jumbobot {
+    padding: 10px;
+    color: inherit;
+    text-align: center;
+    max-width: 700px;
+	margin: 0 auto;
+	background-color: #82E0AA !important;
+}
+
+.jumbobut {
+	border:1px solid green !important;
+	background-color:#27ae60 !important;
+}
+
+.login {
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.resize-video {
+	max-width:600px;
+	padding:10px;
+	margin: 0 auto;
+}
+
+.sponsor {
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+
