@@ -16,7 +16,17 @@ Author: Nic Durish
     <!-- Linked Files -->
     <link rel="stylesheet" type="text/css" href="css/GFB_Stylesheet.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>      
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+    function CheckHost(val){
+        var element=document.getElementById('HostSite');
+        if(val=='HostSite')
+            element.style.display='block';
+
+    }
+
+    </script> 
 </head>
 
 <body>
@@ -178,14 +188,15 @@ Author: Nic Durish
                 <div class="well GFB">
                     <h3>Pickup Information:<h3>
                     <div class="input-group contact-field">
-                        <input type="text" class="form-control store">
-                        <div class="input-group-btn">
+                        <input type="text" id="hs" class="form-control store">
+                        <div id="HostSite" class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Host-Sites <span class="caret"></span></button>
                             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                <li><a href="#">CSA Foodbank</a></li> 
-                                <li><a href="#">Evergreen's Senior Center</a></li> 
-                                <li><a href="#">Green Hill East Neighbourhood Group</a></li>   
+                                <li><a onclick="HostSite('CSA FoodBank'); return false;" href="#">CSA Foodbank</a></li> 
+                                <li><a onclick="HostSite('Evergreens Senior Center'); return false;" href="#">Evergreen's Senior Center</a></li> 
+                                <li><a onclick="HostSite('Green Hill East Neighbourhood Group'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
                             </ul>
+                            <!-- </select> -->  
                         </div>
                     </div><h5><a href="#">Find the Host-Site closest to you!</a></h5>
                 </div>
@@ -240,7 +251,12 @@ Author: Nic Durish
     function reply_click(element)
     {
         document.getElementById('product_name').value = element.getAttribute('data-product-name');
-    }    
+    }   
+
+
+    function HostSite(val){
+        document.getElementById("hs").value = val;
+    } 
     </script>
 
 </body>
