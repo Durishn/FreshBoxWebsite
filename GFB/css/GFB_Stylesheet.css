@@ -44,7 +44,7 @@ span.input-group-addon {
   }
 
 .butsmall{
-  margin-top: 70px;
+  margin-top: 45px;
   }
 
 .contact-field {
@@ -111,8 +111,8 @@ span.input-group-addon {
     -moz-osx-font-smoothing: grayscale
 }
 
-.img-circle {
-  padding-top: 
+.img-circle.logosmall {
+  margin-top: 25px;
 }
 
 .jumbocontent {
@@ -193,6 +193,20 @@ span.input-group-addon {
 
 .panel-body {
   font-size: 17px;
+  background-color: #25A35A !important;
+  border-color: #1C7A44 !important;
+  
+}
+
+.panel-heading {
+  font-size: 17px;
+  background-color: #1C7A44 !important;
+}
+
+.panel-default {
+  font-size: 17px;
+  border-color: #1C7A44 !important;
+
 }
 
 .resize-video {
@@ -208,12 +222,6 @@ span.input-group-addon {
 .well.GFB {
   background-color: #25A35A;
   border-color: #1C7A44;
-}
-
-.well.GFBB {
-  height: 350px;
-  background-color: #25A35A;
-  border-color: #25A35A;
 }
 
 .well.GFB.box-table {
