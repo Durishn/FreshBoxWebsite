@@ -210,7 +210,7 @@ def getHostSiteList(coordinatorID):
 def getAllHostSites(): 
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("SELECT hs.id, hs.name from public.\"hostSites\" hs INNER JOIN public.\"coordinatorHostSiteREL\" c ON c.hostSite_idFK = hs.\"id\")
+	cur.execute("SELECT hs.id, hs.name from public.\"hostSites\" hs INNER JOIN public.\"coordinatorHostSiteREL\" c ON c.hostSite_idFK = hs.\"id\"")
 	rows = cur.fetchall()
 
 	dictionary = []
@@ -229,7 +229,7 @@ def getAllHostSites():
 # 	@return - Array.<Dictionary> Each dictionary contains a host 
 #			site with all host site values listed in the schema 
 #			above
-getHostSite(hostSiteID):
+def getHostSite(hostSiteID):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
 	cur.execute("SELECT hs.id, hs.name from public.\"HostSites\" hs WHERE hs.id = \'" + hostSiteID + "\'")
@@ -247,14 +247,12 @@ getHostSite(hostSiteID):
 
  
 def getOrders(hostSiteID):
+	return 0
 	#TODO: all
 
 	
 def getMenu(self):
-
-    retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}
-	, {'href':'test_ajax', 'title':'AJAX Test'}
-	]
+    retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}, {'href':'test_ajax', 'title':'AJAX Test'}]
 
     if('userType' in self.request.session):
         if(self.request.session['userType'] == 'none'):
