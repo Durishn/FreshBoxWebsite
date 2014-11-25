@@ -23,8 +23,13 @@ class ProjectorViews(Layouts):
         
     @view_config(renderer="templates/manage_accounts.pt",
                  name="users")
-    def company_view(self):
+    def account_view(self):
         return {"page_title": "Manage Users"}
+        
+    @view_config(renderer="templates/manage_host_sites.pt",
+                 name="hostsites")
+    def host_site_view(self):
+        return {"page_title": "Manage Host Sites"}
     
     @view_config(renderer="templates/about_us.pt",
                  name="about")
