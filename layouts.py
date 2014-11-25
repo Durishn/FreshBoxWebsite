@@ -31,4 +31,10 @@ class Layouts(object):
     
     @reify
     def get_host_sites(self):
-        return [{"name","Host Site 1"}] #TODO: connect to DB.
+        retVal = [];
+        if("userType" not in self.request.session):
+            if(self.request.session['userType'] == "Administrator"):
+                retVal = getHostSites()
+            elif(self.request.session['userType'] == "Coordinator"):
+                retVal = getHostSiteList(self.request.session['userID'])
+        return retVal

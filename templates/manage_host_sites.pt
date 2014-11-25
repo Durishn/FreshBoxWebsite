@@ -6,9 +6,11 @@
                 <tbody>
                     <tr>
                         <th class="userhead">Site Name</th>
+                        <th class="userhead">Address</th>
                     </tr>
                     <tr tal:repeat="row view.get_host_sites" class='clickableRow usercell' onclick="window.document.location='#';">
                         <td class="usercell">${row.name}</td>
+                        <td class="usercell">${row.address}</td>
                     </tr>
                 </tbody>
             </table>

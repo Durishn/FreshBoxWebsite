@@ -1,0 +1,168 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <div class="jumbotron jumbosquish jumboGFB jumbotop">
+                <h1>Get a Garden Fresh Box<h1>
+                    <h2>What's in the box?</h2>
+                <div class="well GFB">
+                    
+                    <h5>Garden Fresh Box contents are seasonal.  Produce included is based on quality and availability. Each box also includes a Fresh Ideas newsletter with recipes, storage tips and other useful information.</h5>
+                </div>
+
+                <!-- Accordian -->
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How To Pick Up Your Box <span class="caret"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                To recieve a Garden Fresh Box, you need to enter in your contact, host-site and product information below. Host-Sites are neighbourhood locations, where Garden Fresh boxes are distributed. There are over 20 host-sites currently in guelph; click 'Find the closest host-site' to see their locations. Orders must be made before the first Friday of the month, to provide us ample time to prepare a bin just for you! Order's made past this date will be available during the next month's distribution date.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Sample Small Box ($15) <span class="caret"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul class="left">
+                                    <li >10 Apples</li>
+                                    <li>2 lbs Spanish Onions</li>
+                                    <li>1 Large Cabbage</li>
+                                    <li>1 Butternut Squash</li>
+                                    <li>2 lbs Carrots</li>
+                                    <li>1 lb Candycane Beets</li>
+                                    <li>1 Head Garlic</li>
+                                    <li>1 Pie Pumpkin</li>
+                                    <li>4 Pears</li>
+                                    <li>1 Bunch Leeks</li>
+                                    <li>1 Head Lettuce</li>
+                                    <li>5 lbs potatoes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Sample Large Box ($20) <span class="caret"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul class="left">
+                                    <li >5 Apples</li>
+                                    <li>2 lbs Spanish Onions</li>
+                                    <li>2 lbs Carrots</li>
+                                    <li>1 lb Candycane Beets</li>
+                                    <li>1 Head Garlic</li>
+                                    <li>1 Pie Pumpkin</li>
+                                    <li>4 Pears</li>
+                                    <li>1 Red Pepper</li>
+                                    <li>1 Head Lettuce</li>
+                                    <li>2.5 lbs potatoes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jumbotron jumbosquish jumboGFB jumbomid ">
+                <div class="well GFB">
+                    <h3>Contact Information:<br><h6>*Optional Fields</h6><h3>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">First Name:</span>
+                        <input type="text" class="form-control store" placeholder="John">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Last Name:</span>
+                        <input type="text" class="form-control store" placeholder="Doe">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Email:</span>
+                        <input type="text" class="form-control store" placeholder="J.Doe@gmail.com">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">* Phone:</span>
+                        <input type="text" class="form-control store" placeholder="(012) 345-6789">
+                    </div>
+                    <div class="checkbox">
+                        <h5>
+                            <input type="checkbox" value="remember-me"> Recieve notifications one day prior to distribution date.
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="well GFB">
+                    <h3>Pickup Information:<h3>
+                    <div class="input-group contact-field">
+                        <input readonly="readonly" type="text" id="hs" class="form-control store ">
+                        <div id="HostSite" class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Host-Sites <span class="caret"></span></button>
+                            <ul tal:repeat="hostsite view.get_host_sites" class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a onclick="HostSite('${hostsite.name} - ${hostsite.address}'); return false;" href="#">${hostsite.name}</a></li>  
+                            </ul> 
+                        </div>
+                    </div><h5><a id="findbox" href="#findbox" class="GFB-link">Find the Host-Site closest to you!</a></h5>
+                </div>
+                
+                
+                <div class="well GFB">
+                    <h3>Product Information:<h3>
+                    <h5>Choose box quantity upon checkout.</h5>
+                    <img class="img-circle logosmall" alt="Garden Fresh Box home logo" src="images/gfb_small.png">
+                    <form id="GFBform" action="#GFBform" method="post" class="ppform">
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="upload" value="1">
+
+                        <input type="hidden" name="currency_code" value="CAD">
+                        <input type="hidden" name="business" value="jerritanderson@hotmail.com">
+
+                        <input class="smallbox" type="hidden" name="item_name" value="Small Box">
+                        <input class="smallbox" type="hidden" name="amount" value="15">
+
+                        <input class="largebox" type="hidden" name="item_name" value="Large Box">
+                        <input class="largebox" type="hidden" name="amount" value="20">
+
+                        <input class="donation" type="hidden" name="item_name" value="Donation">
+                        
+
+                        <!-- Quantity of Small Box input !-->
+                        <!--<input class="inval" ref="smallbox" type="text" name="quantity" value="0">!-->
+                        <div class="well GFBB">
+                            <div class="input-group contact-field">
+                                    <span class="input-group-addon IGA">Number of Small Boxes - ($15):</span>
+                                    <input type="text" name="quantity" value="" ref="smallbox" class="inval form-control store" placeholder="# of boxes">
+                            </div>
+
+                            <!-- Quantity of Large Box input !-->
+                            <div class="input-group contact-field">
+                                <span class="input-group-addon IGA">Number of Large Boxes - ($20):</span>
+                                 <input type="text" name="quantity" value="" ref="largebox" class="inval form-control store" placeholder="# of boxes">
+                            </div>
+
+
+                            <!-- Quantity of donations in dollars !-->
+                            <div class="input-group contact-field">
+                                <span class="input-group-addon IGA">Add a Donation:</span>
+                                <input type="text" name="amount" value="" ref="donation" class="inval form-control store" placeholder="0.00">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-lg lower" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">Pay with PayPal</button>
+                    </form>  
+                </div>         
+            </div>
+    </div>
+</div>
