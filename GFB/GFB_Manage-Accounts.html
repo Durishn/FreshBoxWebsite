@@ -115,8 +115,10 @@ Author: Nic Durish
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/jquery">
-    jQuery(document).ready(function($) {
+    $(document).ready(function() {
+        
       $(".clickableRow").click(function() {
+            
             window.document.location = $(this).attr("href");
       });
     });
