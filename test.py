@@ -13,6 +13,8 @@ from dummy_data import addCoordToHostSite
 from dummy_data import removeCoordFromHostSite
 from dummy_data import getHostSiteList
 from dummy_data import getHostSites
+from dummy_data import getHostSite
+from dummy_data import addOrder
 
 import psycopg2
 
@@ -38,7 +40,11 @@ if __name__ == '__main__':
 	
 	#print(getHostSiteList("3"))
 	
-	print(getHostSites())
+	#print(getHostSites())
+	
+	#print(getHostSite("1"))
+	
+	print(addOrder("Bob", "Nopants", "bob@email.com", "123-456-7890", "1" "2", "30", "65", "1"))
 
 def Example():
 

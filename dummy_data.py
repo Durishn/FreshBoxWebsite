@@ -185,13 +185,13 @@ def getHostSite(hostSiteID):
 	rows = cur.fetchall()
 	
 	if len(rows) == 1:
-		return {'id':row[0], 'name':row[1]}
+		return {'id':rows[0][0], 'name':rows[0][1]}
 	return None
 	
-def createNewOrder(customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, total_paid):
+def addOrder(customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, donation, total_paid, hostsite):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("INSERT INTO public.\"Orders\" (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid) VALUES (\'" + customer_first_name + ", " + customer_last_name + ", " + customer_email + ", " + customer_phone + ", " + large_quant + ", " + small_quant + ", " + total_paid + "\')")
+	cur.execute("INSERT INTO public.\"Orders\" (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid, 'hostsitepickup_idFK') VALUES (\'" + customer_first_name + ", " + customer_last_name + ", " + customer_email + ", " + customer_phone + ", " + large_quant + ", " + small_quant + ", " + donation + ", " + total_paid + ", " + hostsite + "\')")
 	conn.commit()
 	
 def updateOrder(order_id, customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, total_paid):
@@ -217,8 +217,11 @@ def getOrders(hostSiteID):
 
 	
 def getMenu(self):
-
-	retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}]
+	retVal = []
+	
+	if ('userType' not in self.request.session):
+		retVal.append({'href':'login','title': 'Staff Login', 'style':''})
+		return retVal
 
 	if (self.request.session['userType'] == 'Administrator'):
 		retVal.append({'href':'logout','title': 'Logout'})
