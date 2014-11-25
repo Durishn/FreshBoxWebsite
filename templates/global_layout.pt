@@ -32,22 +32,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="index">
+                    <a href="/">
                         <img class="img-circle logo" alt="Garden Fresh Box home logo" src="static/images/gfb_small.png">
                     </a>
-                    <a class="navbar-brand" href="index"><strong><span padding="5">Garden Fresh Box</span></strong></a>
+                    <a class="navbar-brand" href="/"><strong><span padding="5">Garden Fresh Box</span></strong></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="active"><a href="index">Home<span class="sr-only">(current)</span></a></li>
-                        <li><a href="Contact_Us">Contact Us</a></li>
+                        <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a href="contact">Contact Us</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn More<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation" class="dropdown-header">About:</li>
-                                <li><a href="About_Us">Garden Fresh Box</a></li>
+                                <li><a href="about">Garden Fresh Box</a></li>
                                 <li><a href="http://www.guelphchc.ca">The Guelph Community Health Center</a></li>
                                 <li><a href="http://www.guelphchc.ca/healthy-living/food-health/guelph-wellington-local-food-initiative">The Guelph Wellington Local Food Initiative</a></li>
                             </ul>

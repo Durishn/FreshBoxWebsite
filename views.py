@@ -17,12 +17,12 @@ class ProjectorViews(Layouts):
         return {"page_title": "Home"}
 
     @view_config(renderer="templates/contact_us.pt",
-                 name="contact_us")
+                 name="contact")
     def company_view(self):
         return {"page_title": "Contact Us"}
     
     @view_config(renderer="templates/about_us.pt",
-                 name="about_us")
+                 name="about")
     def company_view(self):
         return {"page_title": "About Us"}
                 
