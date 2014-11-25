@@ -110,10 +110,10 @@ def getUser(email):
 #
 #  Add a new host site
 #  @return - true if successful database entry, false otherwise
-def addHostSite(name, address, city, province, hoursOfOperation):
+def addHostSite(name, address):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("INSERT INTO public.\"HostSites\" (name) VALUES (\'" + name + "\')")
+	cur.execute("INSERT INTO public.\"HostSites\" (name, address) VALUES (\'" + name + "', '" + address + "\')")
 	conn.commit()
 	return None
 	
@@ -141,12 +141,12 @@ def removeCoordFromHostSite(user_id, hostsite_id):
 def getHostSiteList(coordinatorID):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("SELECT hs.id, hs.name from public.\"HostSites\" hs INNER JOIN public.\"CoordinatorHostSiteRel\" c ON c.\"hostsite_idFK\" = hs.\"id\" WHERE c.\"user_idFK\" = " + coordinatorID)
+	cur.execute("SELECT hs.id, hs.name, hs.address from public.\"HostSites\" hs INNER JOIN public.\"CoordinatorHostSiteRel\" c ON c.\"hostsite_idFK\" = hs.\"id\" WHERE c.\"user_idFK\" = " + coordinatorID)
 	rows = cur.fetchall()
 
 	dictionary = []
 	for row in rows:
-		hostSite = {'id':row[0], 'name':row[1]}
+		hostSite = {'id':row[0], 'name':row[1], 'address':row[2]}
 		dictionary.append(hostSite);
 	return dictionary
 
@@ -162,12 +162,12 @@ def getHostSiteList(coordinatorID):
 def getHostSites(): 
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("SELECT hs.id, hs.name from public.\"HostSites\" hs")
+	cur.execute("SELECT hs.id, hs.name, hs.address from public.\"HostSites\" hs")
 	rows = cur.fetchall()
 
 	dictionary = []
 	for row in rows:
-		hostSite = {'id':row[0], 'name':row[1]}
+		hostSite = {'id':row[0], 'name':row[1], 'address':row[2]}
 		dictionary.append(hostSite);
 	return dictionary
 
