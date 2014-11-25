@@ -28,4 +28,7 @@ class Layouts(object):
     @reify
     def get_users(self):
         return getUsers()
-        
+    
+    @reify
+    def get_host_sites(self):
+        return [{"name","Host Site 1"}] #TODO: connect to DB.
