@@ -1,0 +1,240 @@
+address {
+	font-size: 20px
+}
+
+body {
+  background-color: #ecf0f1 !important;
+}
+
+div.container {
+
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+h4.panel-title {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 17px !important;
+}
+
+table {
+  max-width: 400px !important;
+  margin: 0 auto;
+}
+
+th {
+  text-align: center;
+  font-size: 14px;
+}
+
+td{
+  font-size: 11px;
+  padding: 1px;
+}
+
+span.input-group-addon.IGA {
+  width:125px;
+}
+
+.butbig{
+  margin-top: 20px;
+  }
+
+.butsmall{
+  margin-top: 45px;
+  }
+
+.contact-field {
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.footer {
+	text-align: center;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.img-circle.logosmall {
+  margin-top: 25px;
+}
+
+.jumbocontent {
+  margin: 0;
+  padding: 0px;
+}
+
+.jumboGFB {
+  color: inherit;
+  text-align: center;
+  background-color: #2ecc71 !important;
+  margin-bottom: 1px !important;
+  margin-top: 1px !important;
+}
+
+.jumbolog {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.jumbosquish {
+  max-width: 800px;
+  margin: 0 auto !important;
+}
+
+.jumbotop {
+    margin-top: 60px !important;
+    margin-bottom: 1px !important;
+}
+
+.jumbomid {
+	  margin: 0 auto !important;
+    margin-bottom: 1px !important;
+	  background-color: #58D68D !important;
+}
+
+.jumbobot {
+    max-width: 800px;
+	  margin: 0 auto;
+    margin-bottom: 1px !important;
+	  background-color: #82E0AA !important;
+}
+
+.jumbobotter {
+    margin-bottom: 1px !important;
+    background-color: #82E0AA !important;
+}
+
+.jumbofloor {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 1px !important;
+    background-color: #ABEBC6 !important;
+}
+
+.left {
+  text-align: left;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logobig {
+  width: 250px;
+  height: 250px;
+  background-color: #092917;
+}
+
+.logosmall {
+  width: 200px;
+  height: 200px;
+  background-color: #092917;
+  padding-top: 25px;
+}
+
+.panel-body {
+  font-size: 17px;
+  background-color: #25A35A !important;
+  border-color: #1C7A44 !important;
+  
+}
+
+.panel-heading {
+  font-size: 17px;
+  background-color: #1C7A44 !important;
+}
+
+.panel-default {
+  font-size: 17px;
+  border-color: #1C7A44 !important;
+
+}
+
+.resize-video {
+	max-width:600px;
+	padding:10px;
+	margin: 0 auto;
+}
+
+.wellprod{
+  height: 490px;
+}
+
+.well.GFB {
+  background-color: #25A35A;
+  border-color: #1C7A44;
+}
+
+.well.GFB.box-table {
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: #25A35A;
+  border-color: #1C7A44;
+  margin-bottom: 5px;
+}
+
+.sponsor {
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+
