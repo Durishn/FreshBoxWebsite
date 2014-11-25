@@ -32,7 +32,7 @@ class Layouts(object):
     @reify
     def get_host_sites(self):
         retVal = [];
-        if("userType" not in self.request.session):
+        if("userType" in self.request.session):
             if(self.request.session['userType'] == "Administrator"):
                 retVal = getHostSites()
             elif(self.request.session['userType'] == "Coordinator"):
