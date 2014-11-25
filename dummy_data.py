@@ -13,8 +13,6 @@ def Example():
 #
 #  Check if an email is already used by a user in the database.
 #
-#  email -   the email that the user to be checked would have  
-#        	signed up with
 #  @return - true if a user with the given email is in the  	
 #        	database, false otherwise
 def userExists(email):
@@ -35,24 +33,10 @@ def userExists(email):
 #  Adds a new user to the database.
 #  		This is used by administrators to create new user accounts 
 #		for host site coordinators and for other administrators
-#  
-#  email - email address of the new user
-#  password - the password for the new user (entered manually by 
-#  			administrator)
-#  firstName -
-#  lastName - (optional)
-#  phoneNumber - (optional)
-#  hostSites - (optional) a list of host sites associated with the   
-#  			account, ONLY for coordinator accounts
-#  credentials - required to determine what level of account the
-#			user is being given
-#  @return - true if the user was added successfully, 
-#			false otherwise
 def addUser(credentials, email, password, firstName, lastName, phoneNumber, hostSites):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
 	cur.execute("INSERT INTO public.\"Users\" (email, password, first_name, last_name, phone_number) VALUES (\'" + email + "\', \'" + password + "\', \'" + firstName + "\', \'" + lastName + "\', \'" + phoneNumber + "\')")
-	#print ("INSERT INTO public.\"Users\" (email, password, first_name, last_name, phone_number) VALUES (\'" + email + "\', \'" + password + "\', \'" + firstName + "\', \'" + lastName + "\', \'" + phoneNumber + "\')")
 	conn.commit();
 	return userExists(email)
 	
@@ -62,10 +46,6 @@ def addUser(credentials, email, password, firstName, lastName, phoneNumber, host
 #  		
 #  Check if the given password for a user matches what's in 
 #  		the database for them
-# 
-#  email -
-#  password -
-#  @return - true if auth is valid, false otherwise
 def authUser(email, password):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
@@ -79,17 +59,7 @@ def authUser(email, password):
 # updateUser
 #  
 #  Update user information for a given account.
-# 
-#  email - The email for the user that's in the database
-#  newEmail - (optional) the new email the user should have
-#  newPassword - (optional) the new password the user should have
-#  newFirstName - (optional
-#  newLastName - (optional)
-#  newPhoneNumber - (optional)
-#  hostSites - (optional) a list of hostSiteIDs associated with the   
-#  			account, this is ONLY for coordinator accounts
-#  credentials - (optional) if no credentials provided, no change 
-#  			made
+#
 #  @return - true if the user existed and information was
 #        	successfully updated, false otherwise
 def updateUser(email, newEmail, newPassword, newFirstName, newLastName, newPhoneNumber, hostSites, credentials):
@@ -102,11 +72,6 @@ def updateUser(email, newEmail, newPassword, newFirstName, newLastName, newPhone
 # 		database
 #	Returns an array of dictionaries, each dictionary corresponds to
 #	a User row.
-#
-#  @ return Array.<Dictionar> an array of dictionaries, each 
-#  			dictionary corresponds to a user account
-#  			MUST include ALL user information given by the 
-#			database schema above BUT NOT the plaintext password
 def getUsers():
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
@@ -142,20 +107,6 @@ def getUser(email):
 # addHostSite
 #
 #  Add a new host site
-#
-#  name - the name of the new host site
-#  address - the street number, apartment number and street name 
-#  city - city in which the host site is
-#  province - what province is it
-#  coordinatorIDs - (optional) an up to date list of all 
-#			coordinators associated with the host site
-#  hoursOfOperation - (optional) A dictionary where the key is the 
-#				day of the week and the value is a string which 
-#				looks like: "open,close" and each open and 
-#				close are in 24 hour time (4 digit number: 1200 
-#				is noon for example), you are responsible 
-#				for storing these values.
-#  
 #  @return - true if successful database entry, false otherwise
 def addHostSite(name, address, city, province, hoursOfOperation):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
@@ -174,18 +125,9 @@ def addHostSite(name, address, city, province, hoursOfOperation):
 #
 # 	Returns all host sites for the given coordinator by returning 
 #	an array of dictionaries 
-#
-#	coordinatorID - id value associated with the coordinator 
-#				account
-#
 #	@return - Array.<Dictionary> Each dictionary contains a host 
 #			site with all host site values listed in the schema 
 #			above
-#
-#	Sample SQL query 
-#	SELECT * FROM HostSites hs 
-#		INNER JOIN CoordinatorHostSiteREL c ON c.HostSite_idFK = hs.id 
-#		WHERE c.id = coordinatorID
 def getHostSiteList(coordinatorID):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
@@ -223,9 +165,6 @@ def getAllHostSites():
 #
 #	Sometimes you want to get information based on just a host site   
 #	ID value
-#
-#	hostSiteID - integer value corresponding to that host site
-#
 # 	@return - Array.<Dictionary> Each dictionary contains a host 
 #			site with all host site values listed in the schema 
 #			above
