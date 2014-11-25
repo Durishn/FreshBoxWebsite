@@ -37,6 +37,7 @@ class ProjectorViews(Layouts):
         username = self.request.POST.get('username')
         password = self.request.POST.get('password')
         self.request.session['userType'] = userType(username,password)
+        self.request.session['user_id'] = getUserID(username)
         if(userType(username,password) == 'Administrator'):
             return HTTPFound(location='/')
         return {"page_title": "Login"}

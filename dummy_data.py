@@ -243,6 +243,6 @@ def userType(user,password):
 			if (getUser(user)['credentials'] == 'Administrator'):
 				return "Administrator"
 			elif (getUser(user)['credentials'] == 'Coordinator'):
-				return "Administrator"
+				return "Coordinator"
 	return "none";
 
