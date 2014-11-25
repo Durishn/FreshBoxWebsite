@@ -28,17 +28,7 @@ def userExists(email):
 	
 	return False;
 	
-# addUser 
-#
-#  Adds a new user to the database.
-#  		This is used by administrators to create new user accounts 
-#		for host site coordinators and for other administrators
-def addUser(credentials, email, password, firstName, lastName, phoneNumber, hostSites):
-	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
-	cur = conn.cursor()
-	cur.execute("INSERT INTO public.\"Users\" (email, password, first_name, last_name, phone_number) VALUES (\'" + email + "\', \'" + password + "\', \'" + firstName + "\', \'" + lastName + "\', \'" + phoneNumber + "\')")
-	conn.commit();
-	return userExists(email)
+
 	
 # authUser
 #
@@ -55,6 +45,18 @@ def authUser(email, password):
 		if email == row[0]:
 			return password == row[1]
 	return false
+
+# addUser 
+#
+#  Adds a new user to the database.
+#  		This is used by administrators to create new user accounts 
+#		for host site coordinators and for other administrators
+def addUser(credentials, email, password, firstName, lastName, phoneNumber, hostSites):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("INSERT INTO public.\"Users\" (email, password, first_name, last_name, phone_number) VALUES (\'" + email + "\', \'" + password + "\', \'" + firstName + "\', \'" + lastName + "\', \'" + phoneNumber + "\')")
+	conn.commit();
+	return userExists(email)
 	
 # updateUser
 #  
@@ -63,8 +65,12 @@ def authUser(email, password):
 #  @return - true if the user existed and information was
 #        	successfully updated, false otherwise
 def updateUser(email, newEmail, newPassword, newFirstName, newLastName, newPhoneNumber, hostSites, credentials):
-	#TODO all
-	return false
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("UPDATE public.\"Users\" SET (email, password, first_name, last_name, phone_number) = (" 
+					+ newEmail + ", " + newPassword + ", " + newFirstName + ", " + newLastName + ", " + newPhoneNumber + ") WHERE email = '" + email + "'")
+	conn.commit();
+	return userExists(email)
 	
 # getUsers
 # 
@@ -149,10 +155,10 @@ def getHostSiteList(coordinatorID):
 #	@return - Array.<Dictionary> Each dictionary contains a host 
 #			site with all host site values listed in the schema 
 #			above
-def getAllHostSites(): 
+def getHostSites(): 
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("SELECT hs.id, hs.name from public.\"hostSites\" hs INNER JOIN public.\"coordinatorHostSiteREL\" c ON c.hostSite_idFK = hs.\"id\")
+	cur.execute("SELECT hs.id, hs.name from public.\"hostSites\" hs INNER JOIN public.\"coordinatorHostSiteREL\" c ON c.hostSite_idFK = hs.\"id\"")
 	rows = cur.fetchall()
 
 	dictionary = []
@@ -168,7 +174,7 @@ def getAllHostSites():
 # 	@return - Array.<Dictionary> Each dictionary contains a host 
 #			site with all host site values listed in the schema 
 #			above
-getHostSite(hostSiteID):
+def getHostSite(hostSiteID):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
 	cur.execute("SELECT hs.id, hs.name from public.\"HostSites\" hs WHERE hs.id = \'" + hostSiteID + "\'")
@@ -186,7 +192,16 @@ getHostSite(hostSiteID):
 
  
 def getOrders(hostSiteID):
-	#TODO: all
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("SELECT o.id, o.customer_first_name, o.customer_last_name, o.customer_email, o.customer_phone, o.large_quantity, o.small_quantity, o.donation, o.total_paid FROM public.\"Orders\" o WHERE o.hostsitepickup_idFK = '" + hostSiteID + "'")
+	rows = cur.fetchall()
+
+	dictionary = []
+	for row in rows:
+		order = {'id':row[0], 'customer_name':row[1] + row[2], 'customer_email':row[3], 'customer_phone':row[4], 'large_quant':row[5], 'small_quant':row[6], 'donation':row[7], 'amount_paid':row[8]}
+		dictionary.append(order);
+	return dictionary
 
 	
 def getMenu(self):
