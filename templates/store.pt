@@ -1,82 +1,6 @@
-<!--
-Author: Nic Durish
-!-->
-<!DOCTYPE html>
-<html lang="en" id="Home">
-<head>
-
-    <!-- Meta Data -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GFB: Store</title>
-    <meta name="description" content="Contact for Garden Fresh Box">
-    <meat name="author" content="Fresh Solutions">
-    
-    <!-- Linked Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/GFB_Stylesheet.css" />
-    
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-
-
-</head>
-
-<body>
-    <div class="container">
-        
-        <!--Navigation Bar-->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container-fluid">
-
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="index.html">
-                        <img class="img-circle logo" alt="Garden Fresh Box home logo" src="images/gfb_small.png">
-                    </a>
-                    <a class="navbar-brand" href="index.html"><strong></span padding="5">Garden Fresh Box</strong></a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="GFB_Default_Contact-Us.html">Contact Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn More<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li role="presentation" class="dropdown-header">About:</li>
-                                <li><a href="GFB_Default_About-Us.html">Garden Fresh Box</a></li>
-                                <li><a href="http://www.guelphchc.ca">The Guelph Community Health Center</a></li>
-                                <li><a href="http://www.guelphchc.ca/healthy-living/food-health/guelph-wellington-local-food-initiative">The Guelph Wellington Local Food Initiative</a></li>
-                            </ul>
-                        </li>
-                        <li class="active"><a href="GFB_Default_Store.html">Purchase A Box<span class="sr-only">(current)</span></a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="GFB_Login.html"><i class="glyphicon glyphicon-lock"></i>Staff Login</a></li>
-                    </ul>
-                    <!--
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="GFB_Manage-Accounts.html">Account Manager</a></li>
-                        <li><a href="GFB_Manage-Hosts.html">Host Site Manager</a></li>
-                        <li><a href="GFB_Manage-Orders.html">Order Manager</a></li>
-                    </ul>
-                    -->
-                </div>
-
-            </div>
-        </nav>
-
-        <!-- Main Page Content -->
-        <div class="container theme-showcase" role="main">
-            <div class="jumbotron jumbosquish jumboGFB jumbotop">
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <div class="jumbotron jumbosquish jumboGFB jumbotop">
                 <h1>Get a Garden Fresh Box<h1>
                     <h2>What's in the box?</h2>
                 <div class="well GFB">
@@ -187,10 +111,8 @@ Author: Nic Durish
                         <input readonly="readonly" type="text" id="hs" class="form-control store ">
                         <div id="HostSite" class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Host-Sites <span class="caret"></span></button>
-                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
-                                <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
-                                <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
+                            <ul tal:repeat="hostsite view.get_host_sites" class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a onclick="HostSite('${hostsite.name} - ${hostsite.address}'); return false;" href="#">${hostsite.name}</a></li>  
                             </ul> 
                         </div>
                     </div><h5><a id="findbox" href="#findbox" class="GFB-link">Find the Host-Site closest to you!</a></h5>
@@ -242,42 +164,5 @@ Author: Nic Durish
                     </form>  
                 </div>         
             </div>
-
-
-
-
-
-            <!-- Footer -->
-            <div class="footer">
-                <h3>Made possible with the help of:</h3>
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="images/OHC.png">
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="images/MCYS.png">
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="images/WWLHC.png">
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="images/Shield.png">
-                <p><small> Copyright &copy; FreshSolutions </small></p>
-            </div>
-        </div>
-
     </div>
-
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/gfb.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script type="text/javascript">
-    function reply_click(element)
-    {
-        document.getElementById('product_name').value = element.getAttribute('data-product-name');
-    }   
-    function HostSite(val){
-        document.getElementById("hs").value = val;
-    } 
-    </script>
-
-</body>
-</html>
-
-        
-        
+</div>

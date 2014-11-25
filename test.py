@@ -2,17 +2,7 @@
 
 from pyramid.config import Configurator
 
-from dummy_data import getUsers
-from dummy_data import userExists
-from dummy_data import addUser
-from dummy_data import authUser
-from dummy_data import getUser
-from dummy_data import addHostSite
-from dummy_data import updateUser
-from dummy_data import addCoordToHostSite
-from dummy_data import removeCoordFromHostSite
-from dummy_data import getHostSiteList
-from dummy_data import getHostSites
+from dummy_data import *
 
 import psycopg2
 
@@ -38,8 +28,16 @@ if __name__ == '__main__':
 	
 	#print(getHostSiteList("3"))
 	
-	print(getHostSites())
+	#print(getHostSites())
+	
+	#print(getHostSite("1"))
+	
+	#print(addOrder("Bob", "Nopants", "bob@email.com", "123-456-7890", "1", "2", "30", "65", "1"))
 
+	#print(updateOrder("1", "Bob", "Nopants", "bob@email.com", "123-456-7890", "1", "2", "30", "65", "2"))
+	
+	#print(getOrders("2"))
+	
 def Example():
 
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")

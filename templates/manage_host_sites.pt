@@ -1,0 +1,21 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <h3 class="left jumbotop">Host Site Manager :<hr></h3>
+        <div class="jumbotron jumboGFB jumbosquish">
+            <table class="table table-hover table-condensed usertable">
+                <tbody>
+                    <tr>
+                        <th class="userhead">Site Name</th>
+                        <th class="userhead">Address</th>
+                    </tr>
+                    <tr tal:repeat="row view.get_host_sites" class='clickableRow usercell' onclick="window.document.location='#';">
+                        <td class="usercell">${row.name}</td>
+                        <td class="usercell">${row.address}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6 class="center"> * Click on table row, to edit element.</h6>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Account</a>
+        </div>
+    </div>
+</div>

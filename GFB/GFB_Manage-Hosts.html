@@ -9,13 +9,13 @@ Author: Nic Durish
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GFB: Account Manager</title>
-    <meta name="description" content="Account Manager for Garden Fresh Box">
+    <title>GFB: Host-Site Manager</title>
+    <meta name="description" content="Host-Site Manager for Garden Fresh Box">
     <meat name="author" content="Fresh Solutions">
     
     <!-- Linked Files -->
-    <link rel="stylesheet" type="text/css" href="css/GFB_Stylesheet.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/GFB_Stylesheet.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>      
 </head>
 
@@ -44,7 +44,7 @@ Author: Nic Durish
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
                         <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="GFB_Default_Contact-Us.html">Contact Us<span class="sr-only">(current)</span></a></li>
+                        <li><a href="GFB_Default_Contact-Us.html">Contact Us</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn More<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
@@ -61,8 +61,8 @@ Author: Nic Durish
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="GFB_Manage-Accounts.html">Account Manager</a></li>
-                        <li><a href="GFB_Manage-Hosts.html">Host Site Manager</a></li>
-                        <li><a href="GFB_Manage-Sales.html">Order Manager</a></li>
+                        <li class="active"><a href="GFB_Manage-Hosts.html">Host Site Manager<span class="sr-only">(current)</span></a></li>
+                        <li><a href="GFB_Manage-Orders.html">Order Manager</a></li>
                     </ul>
                 </div>
 
@@ -71,29 +71,26 @@ Author: Nic Durish
 
         <!-- Main Page Content -->
         <div class="container theme-showcase" role="main">
-            
-            <div class="jumbotron jumboGFB jumbotop">
-                <h3 class="left">Host Site Manager:<hr></h3>               
+            <h3 class="left jumbotop">Host-Site Manager :<hr></h3>
+            <div class="jumbotron jumboGFB jumbosquish">
                 <table class="table table-hover table-condensed usertable">
                     <tbody>
                         <tr>
-                            <th class="userhead">Host Site</th>
+                            <th class="userhead">Site Name</th>
                             <th class="userhead">Address</th>
-                            <th class="userhead">Coordinator</th>
+                        </tr>
+                        <tr class='clickableRow usercell' href='#'>
+                            <td class="usercell">CSA Foodbank</td>
+                            <td class="usercell">50 Stone Rd. East. Guelph, ON N1H-3C4</td>
                         </tr>
                         <tr class='clickableRow usercell' href='index.html'>
-                            <td class="usercell">example</td>
-                            <td class="usercell">example</td>
-                            <td class="usercell">example</td>
-                        </tr>
-                        <tr class='clickableRow usercell' href='index.html'>
-                            <td class="usercell">example</td>
-                            <td class="usercell">example</td>
-                            <td class="usercell">example</td>
+                            <td class="usercell">Evergreen Seniors' Center</td>
+                            <td class="usercell">683 Woolwich St. Guelph, ON N1H-3Z1</td>
                         </tr>
                     </tbody>
                 </table>
-                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="index.html" role="button">Add Account</a>
+                <h6 class="center"> * Click on table row, to view or edit element information.</h6>
+                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Host-Site</a>
             </div>
 
 
@@ -111,8 +108,17 @@ Author: Nic Durish
     </div>
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/jquery">
+        $(document).ready(function() {
+            
+          $(".clickableRow").click(function() {
+                
+                window.document.location = $(this).attr("href");
+          });
+        });
+    </script>
 </body>
 </html>

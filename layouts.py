@@ -1,7 +1,7 @@
 from pyramid.renderers import get_renderer
 from pyramid.decorator import reify
 
-from dummy_data import getMenu
+from dummy_data import *
 
 class Layouts(object):
 
@@ -24,3 +24,17 @@ class Layouts(object):
             else:
                 menu['current'] = url.endswith(menu['href'])
         return new_menu
+        
+    @reify
+    def get_users(self):
+        return getUsers()
+    
+    @reify
+    def get_host_sites(self):
+        retVal = [];
+        if("userType" in self.request.session):
+            if(self.request.session['userType'] == "Administrator"):
+                retVal = getHostSites()
+            elif(self.request.session['userType'] == "Coordinator"):
+                retVal = getHostSiteList(self.request.session['userID'])
+        return retVal
