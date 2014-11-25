@@ -18,7 +18,7 @@ if __name__ == '__main__':
 	
 	#print(getUsers())
 	
-	#print(getUser("jon@gfb.com"))
+	print(getUser("jon@gfb.com"))
 	
 	#print(addHostSite("Example Host Site 3", "", "", "", ""))
 	
@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
 	#print(updateOrder("1", "Bob", "Nopants", "bob@email.com", "123-456-7890", "1", "2", "30", "65", "2"))
 	
-	print(getOrders("2"))
+	#print(getOrders("2"))
 	
 def Example():
 

@@ -33,15 +33,15 @@ def userExists(email):
 #  		
 #  Check if the given password for a user matches what's in 
 #  		the database for them
-def authUser(email, password):
-	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
-	cur = conn.cursor()
-	cur.execute("SELECT email, password FROM public.\"Users\"")
-	rows = cur.fetchall()
-	for row in rows:
-		if email == row[0]:
-			return password == row[1]
-	return false
+#def authUser(email, password):
+#	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+#	cur = conn.cursor()
+#	cur.execute("SELECT email, password FROM public.\"Users\"")
+#	rows = cur.fetchall()
+#	for row in rows:
+#		if email == row[0]:
+#			return password == row[1]
+#	return false
 
 # addUser 
 #
@@ -99,11 +99,11 @@ def getUsers():
 def getUser(email):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("SELECT u.email, u.first_name, u.last_name, u.phone_number, c.label from public.\"Users\" u INNER JOIN public.\"Credentials\" c on c.id = u.\"credentials_idFK\" WHERE u.email = \'" + email + "\'")
+	cur.execute("SELECT u.email, u.first_name, u.last_name, u.phone_number, c.label, u.id, u.password from public.\"Users\" u INNER JOIN public.\"Credentials\" c on c.id = u.\"credentials_idFK\" WHERE u.email = '" + email + "'")
 	rows = cur.fetchall()
 	
 	if len(rows) == 1:
-		return {'email': rows[0][0], 'first_name': rows[0][1], 'last_name': rows[0][2], 'phone_number': rows[0][3], 'credentials': rows[0][4]}
+		return {'email': rows[0][0], 'first_name': rows[0][1], 'last_name': rows[0][2], 'phone_number': rows[0][3], 'credentials': rows[0][4], 'id': rows[0][5], 'password':rows[0][6]}
 	return None
 	
 # addHostSite
@@ -244,5 +244,13 @@ def userType(user,password):
 				return "Administrator"
 			elif (getUser(user)['credentials'] == 'Coordinator'):
 				return "Administrator"
-	return "none";
+	return "none"
 
+def authUser(email, password):
+	if (userExists(email)):
+		user = getUser(email)
+		if (user['password'] == password):
+			return user
+		return None
+		
+		

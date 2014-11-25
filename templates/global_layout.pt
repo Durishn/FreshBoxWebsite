@@ -54,9 +54,6 @@
                         </li>
                         <li><a href="Store">Purchase A Box</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="Login"><i class="glyphicon glyphicon-lock"></i>Staff Login</a></li>
-                    </ul>
                     
                     <ul tal:repeat="menu view.site_menu" class="nav navbar-nav navbar-right">
 						<li><a type="#" href="/${menu.href}">${menu.title}</a></li>
