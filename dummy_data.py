@@ -64,8 +64,8 @@ def addUser(credentials, email, password, firstName, lastName, phoneNumber):
 def updateUser(email, newEmail, newPassword, newFirstName, newLastName, newPhoneNumber, credential_id):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("UPDATE public.\"Users\" SET (email, password, first_name, last_name, phone_number, credentials_idFK) = (" 
-					+ newEmail + ", " + newPassword + ", " + newFirstName + ", " + newLastName + ", " + newPhoneNumber + ", " + credential_id + ") WHERE email = '" + email + "'")
+	cur.execute("UPDATE public.\"Users\" SET (email, password, first_name, last_name, phone_number, \"credentials_idFK\") = ('" 
+					+ newEmail + "', '" + newPassword + "', '" + newFirstName + "', '" + newLastName + "', '" + newPhoneNumber + "', '" + credential_id + "') WHERE email = '" + email + "'")
 	conn.commit();
 	return userExists(email)
 	
@@ -120,14 +120,14 @@ def addHostSite(name, address, city, province, hoursOfOperation):
 def addCoordToHostSite(user_id, hostsite_id):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("INSERT INTO public.\"CoordinatorHostSiteRel\" (user_idFK, hostsite_idFK) VALUES (\'" + user_id + ", " + hostsite_id + "\')")
+	cur.execute("INSERT INTO public.\"CoordinatorHostSiteRel\" (\"user_idFK\", \"hostsite_idFK\") VALUES (\'" + user_id + "', '" + hostsite_id + "')")
 	conn.commit()
 	return None
 	
 def removeCoordFromHostSite(user_id, hostsite_id):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("DELETE FROM public.\"CoordinatorHostSiteRel\" WHERE user_idFK = " + user_id + " AND hostsite_idFK = " + hostsite_id)
+	cur.execute("DELETE FROM public.\"CoordinatorHostSiteRel\" WHERE \"user_idFK\" = " + user_id + " AND \"hostsite_idFK\" = " + hostsite_id + "")
 	conn.commit()
 	return None
 	
@@ -141,7 +141,7 @@ def removeCoordFromHostSite(user_id, hostsite_id):
 def getHostSiteList(coordinatorID):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("SELECT hs.id, hs.name from public.\"hostSites\" hs INNER JOIN public.\"coordinatorHostSiteREL\" c ON c.hostSite_idFK = hs.\"id\" WHERE c.user_idFK")
+	cur.execute("SELECT hs.id, hs.name from public.\"HostSites\" hs INNER JOIN public.\"CoordinatorHostSiteRel\" c ON c.\"hostsite_idFK\" = hs.\"id\" WHERE c.\"user_idFK\" = " + coordinatorID)
 	rows = cur.fetchall()
 
 	dictionary = []
@@ -162,7 +162,7 @@ def getHostSiteList(coordinatorID):
 def getHostSites(): 
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("SELECT hs.id, hs.name from public.\"hostSites\" hs INNER JOIN public.\"coordinatorHostSiteREL\" c ON c.hostSite_idFK = hs.\"id\"")
+	cur.execute("SELECT hs.id, hs.name from public.\"HostSites\" hs")
 	rows = cur.fetchall()
 
 	dictionary = []
@@ -219,7 +219,7 @@ def getOrders(hostSiteID):
 def getMenu(self):
 
 	retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}]
-	print(self.request.session['userType'])
+
 	if (self.request.session['userType'] == 'Administrator'):
 		retVal.append({'href':'logout','title': 'Logout'})
 		retVal.append({'href':'users','title': 'Manage Users'})
