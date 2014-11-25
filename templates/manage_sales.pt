@@ -1,0 +1,50 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <h3 class="left jumbotop">Order Manager :<hr></h3>
+        <div class="jumbotron jumboGFB">
+            <div class="well GFB jumbosquish2">
+                <h5>View pending order's for :
+                    <form class="input-group contact-field hostform" method="POST" action="#">
+                        <input readonly="readonly" type="text" id="hs" class="form-control ">
+                        <input type="hidden" name="hsid" value="-1">
+                        <div id="HostSite" class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Host-Sites <span class="caret"></span></button>
+                            <ul tal:repeat="hostsite view.get_host_sites" class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a onclick="HostSite('${hostsite.name} - ${hostsite.address}','${hostsite.id}'); return false;" href="#">${hostsite.name}</a></li>
+                            </ul>
+                            <input type="submit" class="btn btn-default jumbobut btn-info pull-bottom acntbtn" role="button">Refresh</input>
+                        </div>
+                    </form>
+                </h5>
+
+            </div>
+            <form>
+                <table class="table table-hover table-condensed">
+                    <tbody>
+                        <tr>
+                            <th class="userhead1">Order #:</th>
+                            <th class="userhead1">Full Name:</th>
+                            <th class="userhead1">E-mail:</th>
+                            <th class="userhead1">Phone:</th>
+                            <th class="userhead1"># of Small Boxes:</th>
+                            <th class="userhead1"># of Large Boxes:</th>
+                            <th class="userhead1">Total Price:</th>
+
+                        </tr>
+                        <tr tal:repeat="order view.get_orders" class='clickableRow usercell' href='#'>
+                            <td class="usercell">${order.id}</td>
+                            <td class="usercell">${order.customer_name}</td>
+                            <td class="usercell">${order.customer_email}</td>
+                            <td class="usercell">${order.customer_phone}</td>
+                            <td class="usercell">${order.small_quant}</td>
+                            <td class="usercell">${order.large_quant}</td>
+                            <td class="usercell">${order.donation}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Orders</a>
+        </div>
+    </div>
+</div>
