@@ -18,7 +18,7 @@ if __name__ == '__main__':
 	
 	#print(getUsers())
 	
-	print(getUser("jon@gfb.com"))
+	#print(getUser("jon@gfb.com"))
 	
 	#print(addHostSite("Example Host Site 3", "", "", "", ""))
 	
