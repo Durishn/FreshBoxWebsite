@@ -213,42 +213,50 @@ Author: Nic Durish
                     </form>
                 </div>
 
-                <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-                    ">
-                    <button type="submit" class="btn btn-info btn-lg" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">View Cart on PayPal</button>
+                    <!--<button type="submit" class="btn btn-info btn-lg" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">View Cart on PayPal</button>!-->
+
+                <div class="col-md-5 well GFB">
+
+                <form action="#" method="post" class="ppform">
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="upload" value="1">
+
+                    <input type="hidden" name="currency_code" value="CAD">
+                    <input type="hidden" name="business" value="jerritanderson@hotmail.com">
+
+                    <input class="smallbox" type="hidden" name="item_name" value="Small Box">
+                    <input class="smallbox" type="hidden" name="amount" value="15">
+
+                    <input class="largebox" type="hidden" name="item_name" value="Large Box">
+                    <input class="largebox" type="hidden" name="amount" value="20">
+
+                    <input class="donation" type="hidden" name="item_name" value="Donation">
+                    
+
+                    <!-- Quantity of Small Box input !-->
+                    <!--<input class="inval" ref="smallbox" type="text" name="quantity" value="0">!-->
+
+                    <div class="input-group contact-field">
+                            <span class="input-group-addon IGA">Quantity of Small Boxes:</span>
+                            <input type="text" name="quantity" value="0" ref="smallbox" class="inval form-control store" placeholder="1">
+                    </div>
+
+                    <!-- Quantity of Large Box input !-->
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Quantity of Large Boxes:</span>
+                         <input type="text" name="quantity" value="0" ref="largebox" class="inval form-control store" placeholder="1">
+                    </div>
+
+                    <!-- Quantity of donations in dollars !-->
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Donation:</span>
+                        <input type="text" name="amount" value="0" ref="donation" class="inval form-control store" placeholder="1">                </div>
+
+                    <button type="submit" class="btn btn-info btn-lg" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">Pay with PayPal</button>
+
+                    <!--<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">!-->
                 </form>
-
-
-            <form action="#" method="post" class="ppform">
-                <input type="hidden" name="cmd" value="_cart">
-                <input type="hidden" name="upload" value="1">
-
-                <input type="hidden" name="currency_code" value="CAD">
-                <input type="hidden" name="business" value="jerritanderson@hotmail.com">
-
-                <input class="smallbox" type="hidden" name="item_name" value="Small Box">
-                <input class="smallbox" type="hidden" name="amount" value="15">
-
-                <input class="largebox" type="hidden" name="item_name" value="Large Box">
-                <input class="largebox" type="hidden" name="amount" value="20">
-
-                <input class="donation" type="hidden" name="item_name" value="Donation">
-                
-
-                <!-- Quantity of Small Box input !-->
-                <input class="inval" ref="smallbox" type="text" name="quantity" value="0">
-
-                <!-- Quantity of Large Box input !-->
-                <input class="inval" ref="largebox" type="text" name="quantity" value="0">
-
-                <!-- Quantity of donations in dollars !-->
-                <input class="inval" ref="donation" type="text" name="amount" value="0">
-
-
-                <input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-            </form>              
+                </div>            
             </div>
 
 
