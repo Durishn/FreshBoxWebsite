@@ -170,6 +170,86 @@ def addHostSite(name, address, city, province, hoursOfOperation):
 	conn.commit();
 	return None
 	
+# getHostSiteList
+#
+# 	Returns all host sites for the given coordinator by returning 
+#	an array of dictionaries 
+#
+#	coordinatorID - id value associated with the coordinator 
+#				account
+#
+#	@return - Array.<Dictionary> Each dictionary contains a host 
+#			site with all host site values listed in the schema 
+#			above
+#
+#	Sample SQL query 
+#	SELECT * FROM HostSites hs 
+#		INNER JOIN CoordinatorHostSiteREL c ON c.HostSite_idFK = hs.id 
+#		WHERE c.id = coordinatorID
+def getHostSiteList(coordinatorID):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("SELECT hs.id, hs.name from public.\"hostSites\" hs INNER JOIN public.\"coordinatorHostSiteREL\" c ON c.hostSite_idFK = hs.\"id\" WHERE c.user_idFK")
+	rows = cur.fetchall()
+
+	dictionary = []
+	for row in rows:
+		hostSite = {'id':row[0], 'name':row[1]}
+		dictionary.append(hostSite);
+	return dictionary
+
+# getAllHostSites
+#
+# 	Administrators will need to see all host sites and so will 
+#	users of the site when they are looking to see where they want 
+#	to pick up their boxes
+#
+#	@return - Array.<Dictionary> Each dictionary contains a host 
+#			site with all host site values listed in the schema 
+#			above
+def getAllHostSites(): 
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("SELECT hs.id, hs.name from public.\"hostSites\" hs INNER JOIN public.\"coordinatorHostSiteREL\" c ON c.hostSite_idFK = hs.\"id\")
+	rows = cur.fetchall()
+
+	dictionary = []
+	for row in rows:
+		hostSite = {'id':row[0], 'name':row[1]}
+		dictionary.append(hostSite);
+	return dictionary
+
+# getHostSite
+#
+#	Sometimes you want to get information based on just a host site   
+#	ID value
+#
+#	hostSiteID - integer value corresponding to that host site
+#
+# 	@return - Array.<Dictionary> Each dictionary contains a host 
+#			site with all host site values listed in the schema 
+#			above
+getHostSite(hostSiteID):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("SELECT hs.id, hs.name from public.\"HostSites\" hs WHERE hs.id = \'" + hostSiteID + "\'")
+	rows = cur.fetchall()
+	
+	if len(rows) == 1:
+		return {'id':row[0], 'name':row[1]}
+	return None
+	
+#def createNewOrder(dateCreated: String, dateToDistribute: String, firstName: String, lastName: String = None, email: String = None, phoneNumber: String = None, shouldSendNotifications: Boolean=NO, smallBoxQuantity: int = 0,largeBoxQuantity: int =0, donations: decimal=0, donationReceipt: Boolean = None, address: Dictionary = None, totalPaid: decimal=0, hostSitePickupID: int, hostSiteOrderID: int, vouchers: Array.<int>): Boolean
+# TODO: all
+
+#def updateOrder(orderID: int, dateCreated: String, dateToDistribute: String, firstName: String, lastName: String = None, email: String = None, phoneNumber: String = None, shouldSendNotifications: Boolean=NO, smallBoxQuantity: int = 0,largeBoxQuantity: int =0, donations: decimal=0, totalPaid: decimal=0, hostSitePickupID: int, hostSiteOrderID: int, vouchers: Array.<int>): Boolean
+#	TODO: all
+
+ 
+def getOrders(hostSiteID):
+	#TODO: all
+
+	
 def getMenu(self):
 
     retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}
@@ -194,3 +274,4 @@ def userType(user,password):
 			elif (getUser(user)['credentials'] == 'Coordinator'):
 				return "coord"
 	return "none";
+
