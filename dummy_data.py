@@ -114,12 +114,6 @@ def addHostSite(name, address, city, province, hoursOfOperation):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
 	cur.execute("INSERT INTO public.\"HostSites\" (name) VALUES (\'" + name + "\')")
-	
-	#user = getUser
-	
-	#TODO: this method should accept a list of coordinators to add to this host site
-	#cur.execute("INSERT INTO public.\"CoordinatorHostSiteRel\" (\"user_idFK\", \"hostsite_idFK\") VALUES (\'" + name + "\'")
-	#insert into public."CoordinatorHostSiteRel" ("user_idFK", "hostsite_idFK") values (9,2);
 	conn.commit()
 	return None
 	
@@ -194,11 +188,19 @@ def getHostSite(hostSiteID):
 		return {'id':row[0], 'name':row[1]}
 	return None
 	
-#def createNewOrder(dateCreated: String, dateToDistribute: String, firstName: String, lastName: String = None, email: String = None, phoneNumber: String = None, shouldSendNotifications: Boolean=NO, smallBoxQuantity: int = 0,largeBoxQuantity: int =0, donations: decimal=0, donationReceipt: Boolean = None, address: Dictionary = None, totalPaid: decimal=0, hostSitePickupID: int, hostSiteOrderID: int, vouchers: Array.<int>): Boolean
-# TODO: all
-
-#def updateOrder(orderID: int, dateCreated: String, dateToDistribute: String, firstName: String, lastName: String = None, email: String = None, phoneNumber: String = None, shouldSendNotifications: Boolean=NO, smallBoxQuantity: int = 0,largeBoxQuantity: int =0, donations: decimal=0, totalPaid: decimal=0, hostSitePickupID: int, hostSiteOrderID: int, vouchers: Array.<int>): Boolean
-#	TODO: all
+def createNewOrder(customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, total_paid):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("INSERT INTO public.\"Orders\" (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid) VALUES (\'" + customer_first_name + ", " + customer_last_name + ", " + customer_email + ", " + customer_phone + ", " + large_quant + ", " + small_quant + ", " + total_paid + "\')")
+	conn.commit()
+	
+def updateOrder(order_id, customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, total_paid):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("UPDATE public.\"Orders\" SET (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid) = (" 
+					+ customer_first_name + ", " + customer_last_name + ", " + customer_email + ", " + customer_phone + ", " + large_quant + ", " + small_quant + ", " + total_paid + ") WHERE id = '" + order_id + "'")
+	conn.commit();
+	return userExists(email)
 
  
 def getOrders(hostSiteID):
