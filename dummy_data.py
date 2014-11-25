@@ -82,7 +82,7 @@ def getUsers():
 
 	dictionary = []
 	for row in rows:
-		user = {'email': row[0], 'first_name': row[1], 'last_name': row[2], 'phone_number': row[3], 'credentials': row[4]}
+		user = {'email': row[0], 'first_name': row[1], 'last_name': row[2], 'phone': row[3], 'credentials': row[4]}
 		dictionary.append(user);
 	return dictionary
 	
@@ -191,22 +191,23 @@ def getHostSite(hostSiteID):
 def addOrder(customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, donation, total_paid, hostsite):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("INSERT INTO public.\"Orders\" (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid, 'hostsitepickup_idFK') VALUES (\'" + customer_first_name + ", " + customer_last_name + ", " + customer_email + ", " + customer_phone + ", " + large_quant + ", " + small_quant + ", " + donation + ", " + total_paid + ", " + hostsite + "\')")
+	cur.execute("INSERT INTO public.\"Orders\" (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid, \"hostsitepickup_idFK\") VALUES (" 
+	+ "'" + customer_first_name + "', '" + customer_last_name + "', '" + customer_email + "', '" + customer_phone + "', '" + large_quant + "', '" + small_quant + "', '" + donation + "', '" + total_paid + "', '" + hostsite + "')")
 	conn.commit()
 	
-def updateOrder(order_id, customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, total_paid):
+def updateOrder(order_id, customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, donation, total_paid, hostsite):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("UPDATE public.\"Orders\" SET (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid) = (" 
-					+ customer_first_name + ", " + customer_last_name + ", " + customer_email + ", " + customer_phone + ", " + large_quant + ", " + small_quant + ", " + total_paid + ") WHERE id = '" + order_id + "'")
+	cur.execute("UPDATE public.\"Orders\" SET (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid, \"hostsitepickup_idFK\") = ("
+	+ "'" + customer_first_name + "', '" + customer_last_name + "', '" + customer_email + "', '" + customer_phone + "', '" + large_quant + "', '" + small_quant + "', '" + donation + "', '" + total_paid + "', '" + hostsite + "') WHERE id = '" + order_id + "'")
 	conn.commit();
-	return userExists(email)
+	return None
 
  
 def getOrders(hostSiteID):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("SELECT o.id, o.customer_first_name, o.customer_last_name, o.customer_email, o.customer_phone, o.large_quantity, o.small_quantity, o.donation, o.total_paid FROM public.\"Orders\" o WHERE o.hostsitepickup_idFK = '" + hostSiteID + "'")
+	cur.execute("SELECT o.id, o.customer_first_name, o.customer_last_name, o.customer_email, o.customer_phone, o.large_quantity, o.small_quantity, o.donation, o.total_paid FROM public.\"Orders\" o WHERE o.\"hostsitepickup_idFK\" = '" + hostSiteID + "'")
 	rows = cur.fetchall()
 
 	dictionary = []
