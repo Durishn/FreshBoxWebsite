@@ -16,7 +16,6 @@ def Example():
 #  @return - true if a user with the given email is in the  	
 #        	database, false otherwise
 def userExists(email):
-
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
 	cur.execute("SELECT email from public.\"Users\"")
@@ -27,8 +26,6 @@ def userExists(email):
 			return True
 	
 	return False;
-	
-
 	
 # authUser
 #
@@ -51,7 +48,7 @@ def authUser(email, password):
 #  Adds a new user to the database.
 #  		This is used by administrators to create new user accounts 
 #		for host site coordinators and for other administrators
-def addUser(credentials, email, password, firstName, lastName, phoneNumber, hostSites):
+def addUser(credentials, email, password, firstName, lastName, phoneNumber):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
 	cur.execute("INSERT INTO public.\"Users\" (email, password, first_name, last_name, phone_number) VALUES (\'" + email + "\', \'" + password + "\', \'" + firstName + "\', \'" + lastName + "\', \'" + phoneNumber + "\')")
@@ -64,11 +61,11 @@ def addUser(credentials, email, password, firstName, lastName, phoneNumber, host
 #
 #  @return - true if the user existed and information was
 #        	successfully updated, false otherwise
-def updateUser(email, newEmail, newPassword, newFirstName, newLastName, newPhoneNumber, hostSites, credentials):
+def updateUser(email, newEmail, newPassword, newFirstName, newLastName, newPhoneNumber, credential_id):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("UPDATE public.\"Users\" SET (email, password, first_name, last_name, phone_number) = (" 
-					+ newEmail + ", " + newPassword + ", " + newFirstName + ", " + newLastName + ", " + newPhoneNumber + ") WHERE email = '" + email + "'")
+	cur.execute("UPDATE public.\"Users\" SET (email, password, first_name, last_name, phone_number, credentials_idFK) = (" 
+					+ newEmail + ", " + newPassword + ", " + newFirstName + ", " + newLastName + ", " + newPhoneNumber + ", " + credential_id + ") WHERE email = '" + email + "'")
 	conn.commit();
 	return userExists(email)
 	
@@ -76,8 +73,7 @@ def updateUser(email, newEmail, newPassword, newFirstName, newLastName, newPhone
 # 
 #  Lets administrators get a list of all user accounts in the 
 # 		database
-#	Returns an array of dictionaries, each dictionary corresponds to
-#	a User row.
+#	Returns an array of dictionaries, each dictionary corresponds to a User row.
 def getUsers():
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
@@ -118,13 +114,21 @@ def addHostSite(name, address, city, province, hoursOfOperation):
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
 	cur.execute("INSERT INTO public.\"HostSites\" (name) VALUES (\'" + name + "\')")
+	conn.commit()
+	return None
 	
-	user = getUser
+def addCoordToHostSite(user_id, hostsite_id):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("INSERT INTO public.\"CoordinatorHostSiteRel\" (user_idFK, hostsite_idFK) VALUES (\'" + user_id + ", " + hostsite_id + "\')")
+	conn.commit()
+	return None
 	
-	#TODO: this method should accept a list of coordinators to add to this host site
-	#cur.execute("INSERT INTO public.\"CoordinatorHostSiteRel\" (\"user_idFK\", \"hostsite_idFK\") VALUES (\'" + name + "\'")
-	#insert into public."CoordinatorHostSiteRel" ("user_idFK", "hostsite_idFK") values (9,2);
-	conn.commit();
+def removeCoordFromHostSite(user_id, hostsite_id):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("DELETE FROM public.\"CoordinatorHostSiteRel\" WHERE user_idFK = " + user_id + " AND hostsite_idFK = " + hostsite_id)
+	conn.commit()
 	return None
 	
 # getHostSiteList
@@ -184,11 +188,19 @@ def getHostSite(hostSiteID):
 		return {'id':row[0], 'name':row[1]}
 	return None
 	
-#def createNewOrder(dateCreated: String, dateToDistribute: String, firstName: String, lastName: String = None, email: String = None, phoneNumber: String = None, shouldSendNotifications: Boolean=NO, smallBoxQuantity: int = 0,largeBoxQuantity: int =0, donations: decimal=0, donationReceipt: Boolean = None, address: Dictionary = None, totalPaid: decimal=0, hostSitePickupID: int, hostSiteOrderID: int, vouchers: Array.<int>): Boolean
-# TODO: all
-
-#def updateOrder(orderID: int, dateCreated: String, dateToDistribute: String, firstName: String, lastName: String = None, email: String = None, phoneNumber: String = None, shouldSendNotifications: Boolean=NO, smallBoxQuantity: int = 0,largeBoxQuantity: int =0, donations: decimal=0, totalPaid: decimal=0, hostSitePickupID: int, hostSiteOrderID: int, vouchers: Array.<int>): Boolean
-#	TODO: all
+def createNewOrder(customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, total_paid):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("INSERT INTO public.\"Orders\" (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid) VALUES (\'" + customer_first_name + ", " + customer_last_name + ", " + customer_email + ", " + customer_phone + ", " + large_quant + ", " + small_quant + ", " + total_paid + "\')")
+	conn.commit()
+	
+def updateOrder(order_id, customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, total_paid):
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("UPDATE public.\"Orders\" SET (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid) = (" 
+					+ customer_first_name + ", " + customer_last_name + ", " + customer_email + ", " + customer_phone + ", " + large_quant + ", " + small_quant + ", " + total_paid + ") WHERE id = '" + order_id + "'")
+	conn.commit();
+	return userExists(email)
 
  
 def getOrders(hostSiteID):
@@ -206,9 +218,7 @@ def getOrders(hostSiteID):
 	
 def getMenu(self):
 
-    retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}
-	, {'href':'test_ajax', 'title':'AJAX Test'}
-	]
+    retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}]
 
     if('userType' in self.request.session):
         if(self.request.session['userType'] == 'none'):
