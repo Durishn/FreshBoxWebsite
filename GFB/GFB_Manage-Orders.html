@@ -9,9 +9,9 @@ Author: Nic Durish
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GFB: Home</title>
-    <meta name="description" content="Homepage for Garden Fresh Box">
-    <meta name="author" content="Fresh Solutions">
+    <title>GFB: Order Manager</title>
+    <meta name="description" content="Order Manager for Garden Fresh Box">
+    <meat name="author" content="Fresh Solutions">
     
     <!-- Linked Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@ Author: Nic Durish
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="GFB_Default_Contact-Us.html">Contact Us</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn More<span class="caret"></span></a>
@@ -59,13 +59,11 @@ Author: Nic Durish
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="GFB_Login.html"><i class="glyphicon glyphicon-lock"></i>Staff Login</a></li>
                     </ul>
-                
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="GFB_Manage-Accounts.html">Account Manager</a></li>
                         <li><a href="GFB_Manage-Hosts.html">Host Site Manager</a></li>
-                        <li><a href="GFB_Manage-Orders.html">Order Manager</a></li>
+                        <li class="active"><a href="GFB_Manage-Orders.html">Order Manager<span class="sr-only">(current)</span></a></li>
                     </ul>
-                    
                 </div>
 
             </div>
@@ -73,35 +71,64 @@ Author: Nic Durish
 
         <!-- Main Page Content -->
         <div class="container theme-showcase" role="main">
-            <div class="jumbotron jumboGFB jumbotop">
-                <h2 >What is Garden Fresh Box?</h2>
-                <p> The Garden Fresh Box Program is a non-profit, fresh produce buying service created to help people access affordable fresh fruits and vegetables and also to support our local farmers. We are affiliated with the Guelph Wellington Local Food.</p>
-                <a class="btn btn-info btn-lg" href="GFB_Default_About-Us.html" role="button">Learn more</a>      
-            </div>
-            <div class="jumbotron jumboGFB jumbomid">
-                <h2>Help Us, Help Our Community.</h2>
-                <p> Donate, volunteer or set up a host-site in your neighbourhood:
-                </p>
+            <h3 class="left jumbotop">Order Manager :<hr></h3>
+            <div class="jumbotron jumboGFB">
+                <div class="well GFB jumbosquish2">
+                    <h5>View pending order's for :
+                        <div class="input-group contact-field hostform">
+                            <input readonly="readonly" type="text" id="hs" class="form-control ">
+                            <div id="HostSite" class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Host-Sites <span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
+                                    <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
+                                    <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
+                                </ul> 
+                            </div>
+                        </div>
+                    </h5>
 
-                <!-- Button trigger modal -->
-                <button type="button" onclick="window.open('https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CKG83L4ECD2RG', '_new', 'height=630px, width=800px, location=no, menubar=no, left=250, top=100');" target="_blank" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Make a Donation
-                </button>
+                </div>
+                <table class="table table-hover table-condensed">
+                    <tbody>
+                        <tr>
+                            <th class="userhead1">Order #:</th>
+                            <th class="userhead1">Full Name:</th>
+                            <th class="userhead1">E-mail:</th>
+                            <th class="userhead1">Phone:</th>
+                            <th class="userhead1"># of Small Boxes:</th>
+                            <th class="userhead1"># of Large Boxes:</th>
+                            <th class="userhead1">Total Price:</th>
+                            <th class="userhead1">Paid</td>
 
-                <a class="btn btn-info btn-lg" href="GFB_Default_Contact-Us.html" role="button">Contact Us</a>
+                        </tr>
+                        <tr class='clickableRow usercell' href='#'>
+                            <td class="usercell">0000000</td>
+                            <td class="usercell">Nic Durish</td>
+                            <td class="usercell">N.Durish@gmail.com</td>
+                            <td class="usercell">(123) 456-7890</td>
+                            <td class="usercell">2</td>
+                            <td class="usercell">1</td>
+                            <td class="usercell">$50</td>
+                            <td class="usercell"><input type="checkbox" data-toggle="modal" data-target="#myModal"></td>
+
+                        </tr>
+                        <tr class='clickableRow usercell' href='index.html'>
+                            <td class="usercell">0000001</td>
+                            <td class="usercell">Joe McFlow</td>
+                            <td class="usercell">example@Sympatico.com</td>
+                            <td class="usercell">(123) 456-7890</td>
+                            <td class="usercell">1</td>
+                            <td class="usercell">1</td>
+                            <td class="usercell">$35</td>
+                            <td class="usercell"><input type="checkbox" data-toggle="modal" data-target="#myModal"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h6 class="center"> * Click on checkbox to mark as paid.</h6>
+                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Orders</a>
             </div>
-            <div class="jumbotron jumboGFB jumbobot"> 
-                <div class="resize-video">
-                    <div class="embed-responsive embed-responsive-4by3">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Sg0JUw77cro?wmode=transparent"></iframe>
-                    </div>
-                </div> 
-            </div>
-            <div class="jumbotron jumboGFB jumbofloor"> 
-                <h3>View Some of our Sample Newsletters:</h3>
-                <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas.september2012.web.pdf" class="GFB-link">September 2012</a></h4>
-                <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas.october2012.pub.pdf" class="GFB-link">October 2012</a></h4>
-                <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas_november2012_web.pdf" class="GFB-link">November 2012</a></h4>
-            </div>
+
 
             <!-- Footer -->
             <div class="footer">
@@ -113,7 +140,6 @@ Author: Nic Durish
                 <p><small> Copyright &copy; FreshSolutions </small></p>
             </div>
         </div>
-
     </div>
 
     <!-- Modal Thank you for your donation -->
@@ -125,7 +151,7 @@ Author: Nic Durish
                     <h3 class="modal-title center" id="myModalLabel">The Garden Fresh Box Team</h3>
                 </div>
                 <div class="modal-body">
-                    <h4>Thank you for your Donation!</h4>
+                    <h4 class="center">Are you sure you want to mark this sale as paid/unpaid?</h4>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -135,11 +161,26 @@ Author: Nic Durish
     </div>
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/jquery">
+        $(document).ready(function() {
+            
+          $(".clickableRow").click(function() {
+                
+                window.document.location = $(this).attr("href");
+          });
+        });
+    </script>
+    <script type="text/javascript">
+        function reply_click(element)
+        {
+            document.getElementById('product_name').value = element.getAttribute('data-product-name');
+        }   
+        function HostSite(val){
+            document.getElementById("hs").value = val;
+        } 
+    </script>
 </body>
 </html>
-
-        
-        
