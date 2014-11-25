@@ -24,19 +24,22 @@ hr{
   border-color: #1C7A44 !important;
 }
 
-table {
-  max-width: 400px !important;
+table.usertable {
+  max-width:500px;
   margin: 0 auto;
 }
 
-th {
+th.userhead{
+  background-color: #1C7A44 !important;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
+  border-color: #1C7A44 !important;
 }
 
-td{
-  font-size: 11px;
+td.usercell{
+  font-size: 14px;
   padding: 1px;
+  border-color: #1C7A44 !important;
 }
 
 span.input-group-addon.IGA {
@@ -219,6 +222,15 @@ span.input-group-addon.IGA {
 	margin: 0 auto;
 }
 
+.sponsor {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color:   #43D17F;
+}
+
 .wellprod{
   height: 490px;
 }
@@ -235,10 +247,3 @@ span.input-group-addon.IGA {
   border-color: #1C7A44;
   margin-bottom: 5px;
 }
-
-.sponsor {
-	padding-left: 70px;
-	padding-right: 70px;
-}
-
-

@@ -71,8 +71,29 @@ Author: Nic Durish
 
         <!-- Main Page Content -->
         <div class="container theme-showcase" role="main">
-            <div class="jumbotron jumboGFB jumbotop">
-                    <h3 class="left">Manage Accounts:<hr></h3>
+            <h3 class="left jumbotop">Account Manager :<hr></h3>
+            <div class="jumbotron jumboGFB jumbosquish">
+                
+                <table class="table table-hover table-condensed usertable">
+                    <tbody>
+                        <tr>
+                            <th class="userhead">User Type</th>
+                            <th class="userhead">User Name</th>
+                            <th class="userhead">Full Name</th>
+                        </tr>
+                        <tr class='clickableRow usercell' href='index.html'>
+                            <td class="usercell">Coordinator</td>
+                            <td class="usercell">NicD</td>
+                            <td class="usercell">Nic Durish</td>
+                        </tr>
+                        <tr class='clickableRow usercell' href='index.html'>
+                            <td class="usercell">Administrator</td>
+                            <td class="usercell">DoeJ</td>
+                            <td class="usercell">John Doe</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="btn btn-lg btn-default jumbobut btn-info right" href="index.html" role="button">Add Account</a>
             </div>
 
 
@@ -93,5 +114,12 @@ Author: Nic Durish
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/jquery">
+    jQuery(document).ready(function($) {
+      $(".clickableRow").click(function() {
+            window.document.location = $(this).attr("href");
+      });
+    });
+    </script>
 </body>
 </html>
