@@ -16,10 +16,15 @@ class ProjectorViews(Layouts):
     def index_view(self):
         return {"page_title": "Home"}
 
-    @view_config(renderer="templates/company.pt",
-                 name="contact")
+    @view_config(renderer="templates/contact_us.pt",
+                 name="contact_us")
     def company_view(self):
         return {"page_title": "Contact Us"}
+    
+    @view_config(renderer="templates/about_us.pt",
+                 name="about_us")
+    def company_view(self):
+        return {"page_title": "About Us"}
                 
     @view_config(renderer="templates/login.pt",
                 name="login")
