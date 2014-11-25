@@ -1,5 +1,6 @@
-a {
-  color: black;
+a.GFB-link {
+  color: black !important;
+  text-decoration: underline !important;
 }
 
 address {
