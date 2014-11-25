@@ -20,6 +20,11 @@ class ProjectorViews(Layouts):
                  name="contact")
     def company_view(self):
         return {"page_title": "Contact Us"}
+        
+    @view_config(renderer="templates/manage_accounts.pt",
+                 name="users")
+    def company_view(self):
+        return {"page_title": "Manage Users"}
     
     @view_config(renderer="templates/about_us.pt",
                  name="about")
