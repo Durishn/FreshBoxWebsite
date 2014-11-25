@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a href="index">
-                        <img class="img-circle logo" alt="Garden Fresh Box home logo" src="images/gfb_small.png">
+                        <img class="img-circle logo" alt="Garden Fresh Box home logo" src="static/images/gfb_small.png">
                     </a>
                     <a class="navbar-brand" href="index"><strong><span padding="5">Garden Fresh Box</span></strong></a>
                 </div>
@@ -42,24 +42,24 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
                         <li class="active"><a href="index">Home<span class="sr-only">(current)</span></a></li>
-                        <li><a href="GFB_Default_Contact-Us">Contact Us</a></li>
+                        <li><a href="Contact_Us">Contact Us</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn More<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation" class="dropdown-header">About:</li>
-                                <li><a href="GFB_Default_About-Us">Garden Fresh Box</a></li>
+                                <li><a href="About_Us">Garden Fresh Box</a></li>
                                 <li><a href="http://www.guelphchc.ca">The Guelph Community Health Center</a></li>
                                 <li><a href="http://www.guelphchc.ca/healthy-living/food-health/guelph-wellington-local-food-initiative">The Guelph Wellington Local Food Initiative</a></li>
                             </ul>
                         </li>
-                        <li><a href="GFB_Default_Store">Purchase A Box</a></li>
+                        <li><a href="Store">Purchase A Box</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="GFB_Login"><i class="glyphicon glyphicon-lock"></i>Staff Login</a></li>
+                        <li><a href="Login"><i class="glyphicon glyphicon-lock"></i>Staff Login</a></li>
                     </ul>
                     
-                    <ul tal:repeat="menu view.site_menu" class="nav navbar-btn navbar-right" role="buttons">
-						<li><a type="#" class="btn btn-default" href="/${menu.href}">${menu.title}</a></li>
+                    <ul tal:repeat="menu view.site_menu" class="nav navbar-nav navbar-right">
+						<li><a type="#" href="/${menu.href}">${menu.title}</a></li>
                     </ul>
                     
                 </div>
@@ -74,10 +74,10 @@
             <!-- Footer -->
             <div class="footer">
                 <h3>Made possible with the help of:</h3>
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="images/OHC.png">
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="images/MCYS.png">
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="images/WWLHC.png">
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="images/Shield.png">
+                <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/OHC.png">
+                <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/MCYS.png">
+                <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/WWLHC.png">
+                <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/Shield.png">
                 <p><small> Copyright &copy; FreshSolutions </small></p>
             </div>
         </div>
