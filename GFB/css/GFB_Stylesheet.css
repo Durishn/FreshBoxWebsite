@@ -1,6 +1,6 @@
 a.GFB-link {
-  color: black !important;
-  text-decoration: underline !important;
+  color: black ;
+  text-decoration: underline ;
 }
 
 address {
@@ -8,7 +8,7 @@ address {
 }
 
 body {
-  background-color: #ecf0f1 !important;
+  background-color: #ecf0f1 ;
 }
 
 div.container {
@@ -17,16 +17,20 @@ div.container {
   font-family: 'Roboto', sans-serif;
 }
 
+h3.small {
+  color: black ;
+}
+
 h4.panel-title {
   font-size: 20px;
 }
 
 h5 {
-  font-size: 17px !important;
+  font-size: 17px ;
 }
 
 hr{
-  border-color: #1C7A44 !important;
+  border-color: #1C7A44 ;
 }
 
 table.usertable {
@@ -53,7 +57,7 @@ span.input-group-addon.IGA {
 
 .acntbtn {
   margin-top: 20px;
-  margin-bottom: 0px !important;
+  margin-bottom: 0px ;
 }
 
 .butbig{
@@ -128,8 +132,13 @@ span.input-group-addon.IGA {
     -moz-osx-font-smoothing: grayscale
 }
 
+
 .img-circle.logosmall {
   margin-top: 25px;
+}
+
+.input-group-addon.IGA {
+  min-width: 175px
 }
 
 .jumbocontent {
@@ -140,9 +149,9 @@ span.input-group-addon.IGA {
 .jumboGFB {
   color: inherit;
   text-align: center;
-  background-color: #2ecc71 !important;
-  margin-bottom: 1px !important;
-  margin-top: 1px !important;
+  background-color: #2ecc71 ;
+  margin-bottom: 1px ;
+  margin-top: 1px ;
 }
 
 .jumbolog {
@@ -153,37 +162,37 @@ span.input-group-addon.IGA {
 
 .jumbosquish {
   max-width: 800px;
-  margin: 0 auto !important;
+  margin: 0 auto ;
 }
 
 .jumbotop {
-    margin-top: 60px !important;
-    margin-bottom: 1px !important;
+    margin-top: 60px ;
+    margin-bottom: 1px ;
 }
 
 .jumbomid {
-	  margin: 0 auto !important;
-    margin-bottom: 1px !important;
-	  background-color: #58D68D !important;
+	  margin: 0 auto ;
+    margin-bottom: 1px ;
+	  background-color: #58D68D ;
 }
 
 .jumbobot {
     max-width: 800px;
 	  margin: 0 auto;
-    margin-bottom: 1px !important;
-	  background-color: #82E0AA !important;
+    margin-bottom: 1px ;
+	  background-color: #82E0AA ;
 }
 
 .jumbobotter {
-    margin-bottom: 1px !important;
-    background-color: #82E0AA !important;
+    margin-bottom: 1px ;
+    background-color: #82E0AA ;
 }
 
 .jumbofloor {
     max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 1px !important;
-    background-color: #ABEBC6 !important;
+    margin-bottom: 1px ;
+    background-color: #ABEBC6 ;
 }
 
 .left {
@@ -208,9 +217,13 @@ span.input-group-addon.IGA {
   padding-top: 25px;
 }
 
+.lower {
+  margin-top: 20px;
+}
+
 .panel-body {
   font-size: 17px;
-  background-color: #25A35A !important;
+  background-color: #25A35A ;
   border-color: #1C7A44 !important;
   
 }

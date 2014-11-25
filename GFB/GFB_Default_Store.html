@@ -14,8 +14,9 @@ Author: Nic Durish
     <meat name="author" content="Fresh Solutions">
     
     <!-- Linked Files -->
-    <link rel="stylesheet" type="text/css" href="css/GFB_Stylesheet.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/GFB_Stylesheet.css" />
+    
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 
@@ -187,76 +188,52 @@ Author: Nic Durish
                                 <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
                                 <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
                                 <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
-                            </ul>
-                            <!-- </select> -->  
+                            </ul> 
                         </div>
                     </div><h5><a href="#" class="GFB-link">Find the Host-Site closest to you!</a></h5>
                 </div>
                 
                 <h3>Product Information:<h3>
                 <h5>Choose box quantity upon checkout.</h5>
-                <div class="col-md-5 well GFB">
-                    <img class="img-circle logobig" alt="Garden Fresh Box home logo" src="images/gfb_small.png">
-                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="Y4YTCYVF9J9HJ">
-                        <button type="submit" class="btn btn-info btn-lg butbig" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">Add Large Box to Cart ($20)</button>
-                    </form>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-5 well GFB">
+                <div class="well GFB">
                     <img class="img-circle logosmall" alt="Garden Fresh Box home logo" src="images/gfb_small.png">
-                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="ABTMESZJZZ6MJ">
-                        <button type="submit" class ="btn btn-info btn-lg butsmall" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">Add Small Box to Cart ($15)</button>
-                    </form>
-                </div>
+                    <form id="GFBform" action="#GFBform" method="post" class="ppform">
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="upload" value="1">
 
-                    <!--<button type="submit" class="btn btn-info btn-lg" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">View Cart on PayPal</button>!-->
+                        <input type="hidden" name="currency_code" value="CAD">
+                        <input type="hidden" name="business" value="jerritanderson@hotmail.com">
 
-                <div class="col-md-5 well GFB">
+                        <input class="smallbox" type="hidden" name="item_name" value="Small Box">
+                        <input class="smallbox" type="hidden" name="amount" value="15">
 
-                <form action="#" method="post" class="ppform">
-                    <input type="hidden" name="cmd" value="_cart">
-                    <input type="hidden" name="upload" value="1">
+                        <input class="largebox" type="hidden" name="item_name" value="Large Box">
+                        <input class="largebox" type="hidden" name="amount" value="20">
 
-                    <input type="hidden" name="currency_code" value="CAD">
-                    <input type="hidden" name="business" value="jerritanderson@hotmail.com">
+                        <input class="donation" type="hidden" name="item_name" value="Donation">
+                        
 
-                    <input class="smallbox" type="hidden" name="item_name" value="Small Box">
-                    <input class="smallbox" type="hidden" name="amount" value="15">
+                        <!-- Quantity of Small Box input !-->
+                        <!--<input class="inval" ref="smallbox" type="text" name="quantity" value="0">!-->
+                        <div class="input-group contact-field">
+                                <span class="input-group-addon IGA">Quantity of Small Boxes:</span>
+                                <input type="text" name="quantity" value="0" ref="smallbox" class="inval form-control store" placeholder="1">
+                        </div>
 
-                    <input class="largebox" type="hidden" name="item_name" value="Large Box">
-                    <input class="largebox" type="hidden" name="amount" value="20">
+                        <!-- Quantity of Large Box input !-->
+                        <div class="input-group contact-field">
+                            <span class="input-group-addon IGA">Quantity of Large Boxes:</span>
+                             <input type="text" name="quantity" value="0" ref="largebox" class="inval form-control store" placeholder="1">
+                        </div>
 
-                    <input class="donation" type="hidden" name="item_name" value="Donation">
-                    
+                        <!-- Quantity of donations in dollars !-->
+                        <div class="input-group contact-field">
+                            <span class="input-group-addon IGA">Donation:</span>
+                            <input type="text" name="amount" value="0" ref="donation" class="inval form-control store" placeholder="1">                </div>
 
-                    <!-- Quantity of Small Box input !-->
-                    <!--<input class="inval" ref="smallbox" type="text" name="quantity" value="0">!-->
-
-                    <div class="input-group contact-field">
-                            <span class="input-group-addon IGA">Quantity of Small Boxes:</span>
-                            <input type="text" name="quantity" value="0" ref="smallbox" class="inval form-control store" placeholder="1">
-                    </div>
-
-                    <!-- Quantity of Large Box input !-->
-                    <div class="input-group contact-field">
-                        <span class="input-group-addon IGA">Quantity of Large Boxes:</span>
-                         <input type="text" name="quantity" value="0" ref="largebox" class="inval form-control store" placeholder="1">
-                    </div>
-
-                    <!-- Quantity of donations in dollars !-->
-                    <div class="input-group contact-field">
-                        <span class="input-group-addon IGA">Donation:</span>
-                        <input type="text" name="amount" value="0" ref="donation" class="inval form-control store" placeholder="1">                </div>
-
-                    <button type="submit" class="btn btn-info btn-lg" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">Pay with PayPal</button>
-
-                    <!--<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">!-->
-                </form>
-                </div>            
+                        <button type="submit" class="btn btn-info btn-lg lower" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">Pay with PayPal</button>
+                    </form>  
+                </div>         
             </div>
 
 
@@ -288,8 +265,6 @@ Author: Nic Durish
     {
         document.getElementById('product_name').value = element.getAttribute('data-product-name');
     }   
-
-
     function HostSite(val){
         document.getElementById("hs").value = val;
     } 

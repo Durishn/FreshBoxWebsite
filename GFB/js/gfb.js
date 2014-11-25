@@ -3,6 +3,7 @@ $(document).ready(function(){
         var count = 1;
         $(".inval").each(function(){
             if($(this).val() > 0){
+                $(".ppform").attr("target","_blank");
                 $(".ppform").attr("action","https://www.paypal.com/cgi-bin/webscr");
                 $(this).attr("name",$(this).attr("name") + "_" + count);
                 $("."+$(this).attr("ref")).each(function(){
@@ -13,4 +14,3 @@ $(document).ready(function(){
         });
     });
 });
-
