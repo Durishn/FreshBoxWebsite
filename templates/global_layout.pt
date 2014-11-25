@@ -35,7 +35,7 @@
                     <a href="index.html">
                         <img class="img-circle logo" alt="Garden Fresh Box home logo" src="images/gfb_small.png">
                     </a>
-                    <a class="navbar-brand" href="index.html"><strong></span padding="5">Garden Fresh Box</strong></a>
+                    <a class="navbar-brand" href="index.html"><strong><span padding="5">Garden Fresh Box</span></strong></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
