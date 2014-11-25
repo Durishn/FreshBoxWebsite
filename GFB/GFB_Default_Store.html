@@ -16,7 +16,7 @@ Author: Nic Durish
     <!-- Linked Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/GFB_Stylesheet.css" />
-    
+    <link rel="javascript" type="text/javascript" href="js/gfb.js"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 
@@ -66,7 +66,7 @@ Author: Nic Durish
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="GFB_Manage-Accounts.html">Account Manager</a></li>
                         <li><a href="GFB_Manage-Hosts.html">Host Site Manager</a></li>
-                        <li><a href="GFB_Manage-Sales.html">Sale Manager</a></li>
+                        <li><a href="GFB_Manage-Orders.html">Order Manager</a></li>
                     </ul>
                     -->
                 </div>
@@ -193,7 +193,7 @@ Author: Nic Durish
                                 <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
                             </ul> 
                         </div>
-                    </div><h5><a id="findbox" href="#findbox" class="GFB-link">Find the Host-Site closest to you!</a></h5>
+                    </div><h5><a id="findbox" href="#findbox" class="GFB-link">See Host-Site Locations!</a></h5>
                 </div>
                 
                 
@@ -237,6 +237,7 @@ Author: Nic Durish
                                 <span class="input-group-addon IGA">Add a Donation:</span>
                                 <input type="text" name="amount" value="" ref="donation" class="inval form-control store" placeholder="0.00">
                             </div>
+                            <h4>Total Amount: <form>$0.00</form><h4>
                         </div>
                         <button type="submit" class="btn btn-info btn-lg lower" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">Pay with PayPal</button>
                     </form>  
@@ -266,17 +267,6 @@ Author: Nic Durish
     <script src="js/bootstrap.min.js"></script>
     <script src="js/gfb.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-
-    <script type="text/javascript">
-    function reply_click(element)
-    {
-        document.getElementById('product_name').value = element.getAttribute('data-product-name');
-    }   
-    function HostSite(val){
-        document.getElementById("hs").value = val;
-    } 
-    </script>
-
 </body>
 </html>
 

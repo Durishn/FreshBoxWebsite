@@ -62,7 +62,7 @@ Author: Nic Durish
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="GFB_Manage-Accounts.html">Account Manager<span class="sr-only">(current)</span></a></li>
                         <li><a href="GFB_Manage-Hosts.html">Host Site Manager</a></li>
-                        <li><a href="GFB_Manage-Sales.html">Order Manager</a></li>
+                        <li><a href="GFB_Manage-Orders.html">Order Manager</a></li>
                     </ul>
                 </div>
 
@@ -92,8 +92,8 @@ Author: Nic Durish
                         </tr>
                     </tbody>
                 </table>
-                <h6 class="center"> * Click on table row, to edit element.</h6>
-                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Account</a>
+                <h6 class="center"> * Click on table row, to view or edit element information.</h6>
+                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_Edit-User" role="button">Add Account</a>
             </div>
 
 
@@ -114,14 +114,5 @@ Author: Nic Durish
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/jquery">
-        $(document).ready(function() {
-            
-          $(".clickableRow").click(function() {
-                
-                window.document.location = $(this).attr("href");
-          });
-        });
-    </script>
 </body>
 </html>

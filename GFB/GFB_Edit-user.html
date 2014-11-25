@@ -9,14 +9,15 @@ Author: Nic Durish
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GFB: Home</title>
-    <meta name="description" content="Homepage for Garden Fresh Box">
-    <meta name="author" content="Fresh Solutions">
+    <title>GFB: Edit User</title>
+    <meta name="description" content="Contact for Garden Fresh Box">
+    <meat name="author" content="Fresh Solutions">
     
     <!-- Linked Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/GFB_Stylesheet.css" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>      
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
@@ -43,7 +44,7 @@ Author: Nic Durish
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="GFB_Default_Contact-Us.html">Contact Us</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn More<span class="caret"></span></a>
@@ -54,16 +55,16 @@ Author: Nic Durish
                                 <li><a href="http://www.guelphchc.ca/healthy-living/food-health/guelph-wellington-local-food-initiative">The Guelph Wellington Local Food Initiative</a></li>
                             </ul>
                         </li>
-                        <li><a href="GFB_Default_Store.html">Purchase A Box</a></li>
+                        <li class="active"><a href="GFB_Default_Store.html">Purchase A Box<span class="sr-only">(current)</span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="GFB_Login.html"><i class="glyphicon glyphicon-lock"></i>Staff Login</a></li>
                     </ul>
-                
+
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="GFB_Manage-Accounts.html">Account Manager</a></li>
                         <li><a href="GFB_Manage-Hosts.html">Host Site Manager</a></li>
-                        <li><a href="GFB_Manage-Orders.html">Order Manager</a></li>
+                        <li><a href="GFB_Manage-Sales.html">Sale Manager</a></li>
                     </ul>
                     
                 </div>
@@ -71,40 +72,51 @@ Author: Nic Durish
             </div>
         </nav>
 
-        <!-- Main Page Content -->
-        <div class="container theme-showcase" role="main">
-            <div class="jumbotron jumboGFB jumbotop">
-                <h2 >What is Garden Fresh Box?</h2>
-                <p> The Garden Fresh Box Program is a non-profit, fresh produce buying service created to help people access affordable fresh fruits and vegetables and also to support our local farmers. We are affiliated with the Guelph Wellington Local Food.</p>
-                <a class="btn btn-info btn-lg" href="GFB_Default_About-Us.html" role="button">Learn more</a>      
-            </div>
-            <div class="jumbotron jumboGFB jumbomid">
-                <h2>Help Us, Help Our Community.</h2>
-                <p> Donate, volunteer or set up a host-site in your neighbourhood:
-                </p>
+        
+            <div class="jumbotron jumbosquish jumboGFB jumbomid ">
+                <div class="well GFB">
+                    <form>
+                    <h3>Edit User :<br><h3>
 
-                <!-- Button trigger modal -->
-                <button type="button" onclick="window.open('https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CKG83L4ECD2RG', '_new', 'height=630px, width=800px, location=no, menubar=no, left=250, top=100');" target="_blank" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Make a Donation
-                </button>
-
-                <a class="btn btn-info btn-lg" href="GFB_Default_Contact-Us.html" role="button">Contact Us</a>
-            </div>
-            <div class="jumbotron jumboGFB jumbobot"> 
-                <div class="resize-video">
-                    <div class="embed-responsive embed-responsive-4by3">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Sg0JUw77cro?wmode=transparent"></iframe>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Username:</span>
+                        <input type="text" class="form-control store" placeholder="John">
                     </div>
-                </div> 
-            </div>
-            <div class="jumbotron jumboGFB jumbofloor"> 
-                <h3>View Some of our Sample Newsletters:</h3>
-                <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas.september2012.web.pdf" class="GFB-link">September 2012</a></h4>
-                <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas.october2012.pub.pdf" class="GFB-link">October 2012</a></h4>
-                <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas_november2012_web.pdf" class="GFB-link">November 2012</a></h4>
-            </div>
+
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">First Name:</span>
+                        <input type="text" class="form-control store" placeholder="John">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Last Name:</span>
+                        <input type="text" class="form-control store" placeholder="Doe">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Email:</span>
+                        <input type="text" class="form-control store" placeholder="J.Doe@gmail.com">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">* Phone:</span>
+                        <input type="text" class="form-control store" placeholder="(012) 345-6789">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">* User Type :</span>
+                        
+                        <select class="input-group contact-field">
+                          <option value="Coordinator" class="form-control store">Coordinator</option>
+                            <option value="Administrator" class="form-control store">Administrator</option>
+                        </select> 
+                    </div>
+                    </form>                    
+                    <button type="button" class="btn btn-info btn-lg" padding="5px">Cancel</button>    
+
+                    <button type="button"  class="btn btn-info btn-lg" padding="5px">Submit</button>
+                </div>
+
+                
 
             <!-- Footer -->
-            <div class="footer">
+            <div class="footer" width="100">
                 <h3>Made possible with the help of:</h3>
                 <img class="sponsor" alt="Garden Fresh Box home logo" src="images/OHC.png">
                 <img class="sponsor" alt="Garden Fresh Box home logo" src="images/MCYS.png">
@@ -116,28 +128,22 @@ Author: Nic Durish
 
     </div>
 
-    <!-- Modal Thank you for your donation -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h3 class="modal-title center" id="myModalLabel">The Garden Fresh Box Team</h3>
-                </div>
-                <div class="modal-body">
-                    <h4>Thank you for your Donation!</h4>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    function reply_click(element)
+    {
+        document.getElementById('product_name').value = element.getAttribute('data-product-name');
+    }   
+
+
+    function HostSite(val){
+        document.getElementById("hs").value = val;
+    } 
+    </script>
+
 </body>
 </html>
 
