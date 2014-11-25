@@ -1,5 +1,51 @@
 <div metal:use-macro="view.global_template">
     <div metal:fill-slot="content">
-        <p>Home page content goes here.</p>
+        <div class="jumbotron jumboGFB jumbotop">
+                <h2 >What is Garden Fresh Box?</h2>
+                <p> The Garden Fresh Box Program is a non-profit, fresh produce buying service created to help people access affordable fresh fruits and vegetables and also to support our local farmers. We are affiliated with the Guelph Wellington Local Food.</p>
+                <a class="btn btn-info btn-lg" href="GFB_Default_About-Us.html" role="button">Learn more</a>      
+            </div>
+            <div class="jumbotron jumboGFB jumbomid">
+                <h2>Help Us, Help Our Community.</h2>
+                <p> Donate, volunteer or set up a host-site in your neighbourhood:
+                </p>
+
+                <!-- Button trigger modal -->
+                <button type="button" onclick="window.open('https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CKG83L4ECD2RG');" target="_blank" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Make a Donation
+                </button>
+
+                <!-- Modal Thank you for your donation -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h3 class="modal-title left" id="myModalLabel">The Garden Fresh Box Team</h3>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Thank you for your Donation!<br><br> :D </h4>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="btn btn-info btn-lg" href="GFB_Default_Contact-Us.html" role="button">Contact Us</a>
+            </div>
+            <div class="jumbotron jumboGFB jumbobot"> 
+                <div class="resize-video">
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Sg0JUw77cro?wmode=transparent"></iframe>
+                    </div>
+                </div> 
+            </div>
+            <div class="jumbotron jumboGFB jumbofloor"> 
+                <h3>View Some of our Sample Newsletters:</h3>
+                <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas.september2012.web.pdf">September 2012</a></h4>
+                <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas.october2012.pub.pdf">October 2012</a></h4>
+                <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas_november2012_web.pdf">November 2012</a></h4>
+            </div>
     </div>
 </div>
