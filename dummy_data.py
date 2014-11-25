@@ -218,24 +218,27 @@ def getOrders(hostSiteID):
 	
 def getMenu(self):
 
-    retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}]
-
-    if('userType' in self.request.session):
-        if(self.request.session['userType'] == 'none'):
-            retVal.append({'href':'login','title': 'Login'});
-        else:
-            retVal.append({'href':'logout','title': 'Logout'});
-    else:
-        retVal.append({'href':'login','title': 'Login', 'style':''});
-    return retVal
+	retVal = [ {'href': '', 'title': 'Home'},  {'href': 'contact', 'title': 'Contact Us'}]
+	print(self.request.session['userType'])
+	if (self.request.session['userType'] == 'Administrator'):
+		retVal.append({'href':'logout','title': 'Logout'})
+		retVal.append({'href':'users','title': 'Manage Users'})
+		retVal.append({'href':'hostsites','title': 'Manage HostSites'})
+		retVal.append({'href':'orders','title': 'Manage Orders'})
+	elif (self.request.session['userType'] == 'Coordinator'):
+		retVal.append({'href':'logout','title': 'Logout'})
+		retVal.append({'href':'hostsites','title': 'Manage HostSites'})
+		retVal.append({'href':'orders','title': 'Manage Orders'})
+	else:
+		retVal.append({'href':'login','title': 'Staff Login', 'style':''})
+	return retVal
     
 def userType(user,password):
-    #if(user == 'admin' and password == 'pass'):
 	if (userExists(user)):
 		if (authUser(user, password)):
 			if (getUser(user)['credentials'] == 'Administrator'):
-				return "admin"
+				return "Administrator"
 			elif (getUser(user)['credentials'] == 'Coordinator'):
-				return "coord"
+				return "Administrator"
 	return "none";
 
