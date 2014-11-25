@@ -12,6 +12,10 @@ div.container {
   font-family: 'Roboto', sans-serif;
 }
 
+h4.panel-title {
+  font-size: 20px;
+}
+
 h5 {
   font-size: 17px !important;
 }
@@ -34,6 +38,14 @@ td{
 span.input-group-addon {
   width:125px;
 }
+
+.butbig{
+  margin-top: 20px;
+  }
+
+.butsmall{
+  margin-top: 70px;
+  }
 
 .contact-field {
   padding: 5px;
@@ -99,6 +111,10 @@ span.input-group-addon {
     -moz-osx-font-smoothing: grayscale
 }
 
+.img-circle {
+  padding-top: 
+}
+
 .jumbocontent {
   margin: 0;
   padding: 0px;
@@ -162,15 +178,42 @@ span.input-group-addon {
   height: 40px;
 }
 
+.logobig {
+  width: 250px;
+  height: 250px;
+  background-color: #092917;
+}
+
+.logosmall {
+  width: 200px;
+  height: 200px;
+  background-color: #092917;
+  padding-top: 25px;
+}
+
+.panel-body {
+  font-size: 17px;
+}
+
 .resize-video {
 	max-width:600px;
 	padding:10px;
 	margin: 0 auto;
 }
 
+.wellprod{
+  height: 490px;
+}
+
 .well.GFB {
   background-color: #25A35A;
   border-color: #1C7A44;
+}
+
+.well.GFBB {
+  height: 350px;
+  background-color: #25A35A;
+  border-color: #25A35A;
 }
 
 .well.GFB.box-table {
