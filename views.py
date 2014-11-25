@@ -27,7 +27,7 @@ class ProjectorViews(Layouts):
 	def host_site_view(self):
 		return {"page_title": "Manage Host Sites"}
     
-    @view_config(renderer="templates/store.pt", name="store")
+	@view_config(renderer="templates/store.pt", name="store")
 	def store_view(self):
 		return {"page_title": "Store"}
 
