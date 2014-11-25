@@ -38,3 +38,10 @@ class Layouts(object):
             elif(self.request.session['userType'] == "Coordinator"):
                 retVal = getHostSiteList(self.request.session['userID'])
         return retVal
+        
+    @reify
+    def get_orders(self):
+        retVal = [];
+        hostsite_id = self.request.POST.get('hsid')
+        retVal = getOrders(hostsite_id)
+        return retVal
