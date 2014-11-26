@@ -32,24 +32,23 @@
             <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas.october2012.pub.pdf">October 2012</a></h4>
             <h4><a href="http://www.guelphchc.ca/app/webroot/assets/Newsletters/Garden_Fresh_Box_Fresh_Ideas/fresh_ideas_november2012_web.pdf">November 2012</a></h4>
         </div>
-    </div>
 
-    <!-- Modal Thank you for your donation -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h3 class="modal-title left" id="myModalLabel">The Garden Fresh Box Team</h3>
-                </div>
-                <div class="modal-body">
-                    <h4>Thank you for your Donation!<br><br> :D </h4>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <!-- Modal Thank you for your donation -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h3 class="modal-title left" id="myModalLabel">The Garden Fresh Box Team</h3>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Thank you for your Donation!<br><br> :D </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>

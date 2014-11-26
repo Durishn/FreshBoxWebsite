@@ -58,7 +58,6 @@
             </form>
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="hostsites" role="button">Cancel</a>
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="hostsites" role="button">Save Changes</a>
-            </div>
         </div>
         <script> 
             function HostSite(val){
