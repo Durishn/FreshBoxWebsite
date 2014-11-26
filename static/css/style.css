@@ -1,69 +1,315 @@
-
-h1 {
-	margin-left:100px;
-	margin-right:100px;
-	text-align:center;
-	padding:15px;
+a.GFB-link {
+  color: black ;
+  text-decoration: underline ;
 }
 
-p {
-	font-size:1.125em;
+address {
+	font-size: 20px
 }
 
-img.center {
-	display:block;
-	margin-left:auto;
-    margin-right: auto;
-	width:22em;
-	padding-bottom:15px;
-}
-
-a.link {
-	color:#27ae60 !important;
-}
-
-div.information {
-	padding:25px;
-	border:20px outset green;
+body {
+  background-color: #ecf0f1 ;
 }
 
 div.container {
-	font-family:'Roboto', sans-serif;
-	background-color:white;
+
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
-span.title {
-	font-family:'Roboto', sans-serif;
-	font-size:4em;
-	text-align:right;
+h4.panel-title {
+  font-size: 20px;
 }
 
-.btn-lg {
-	border:1px solid green !important;
-	background-color:#27ae60 !important;
+h5 {
+  font-size: 17px ;
 }
 
-.jumbotron {
-	float:left;
-	width:100%;
-	background-color: #2ecc71 !important;
+hr{
+  border-color: #1C7A44 ;
+}
+
+table.usertable {
+  max-width:600px;
+  margin: 0 auto;
+}
+
+th.userhead{
+  background-color: #1C7A44 !important;
+  text-align: center;
+  font-size: 16px;
+  border-color: #1C7A44 !important;
+}
+
+th.userhead1{
+  background-color: #1C7A44 !important;
+  text-align: center;
+  font-size: 14px;
+  border-color: #1C7A44 !important;
+}
+
+td.usercell{
+  font-size: 14px;
+  padding: 1px;
+  border-color: #1C7A44 !important;
+}
+
+span.input-group-addon.IGA {
+  width:230px;
+}
+
+span.input-group-addon.IGA1 {
+  width:130px;
+}
+
+.acntbtn {
+  margin-top: 20px;
+  margin-bottom: 0px ;
+}
+
+.butbig{
+  margin-top: 20px;
+  }
+
+.butsmall{
+  margin-top: 45px;
+  }
+
+.contact-field {
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.SIZE{
+  max-width:430px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.SIZE1{
+  max-width:330px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.center{
+  text-align:center;
+}
+
+.footer {
+	text-align: center;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.img-circle.logosmall {
+  margin-top: 25px;
+}
+
+.input-group-addon.IGA {
+  min-width: 175px
+}
+
+
+.jumbocontent {
+  margin: 0;
+  padding: 0px;
+}
+
+.jumboGFB {
+  color: inherit;
+  text-align: center;
+  background-color: #2ecc71 ;
+  margin-bottom: 1px ;
+  margin-top: 1px ;
+}
+
+.jumbolog {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.jumbosquish {
+  max-width: 800px;
+  margin: 0 auto ;
+}
+
+.jumbosquish2 {
+  max-width: 800px;
+  margin: 0 auto ;
+  margin-bottom:30px;
+}
+
+.jumbotop {
+    margin-top: 60px ;
+    margin-bottom: 1px ;
+}
+
+.jumbomid {
+	  margin: 0 auto ;
+    margin-bottom: 1px ;
+	  background-color: #58D68D ;
+}
+
+.jumbobot {
+    max-width: 800px;
+	  margin: 0 auto;
+    margin-bottom: 1px ;
+	  background-color: #82E0AA ;
+}
+
+.jumbobotter {
+    margin-bottom: 1px ;
+    background-color: #82E0AA ;
+}
+
+.jumbofloor {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 1px ;
+    background-color: #ABEBC6 ;
+}
+
+.left {
+  text-align: left;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logobig {
+  width: 250px;
+  height: 250px;
+  background-color: #092917;
+}
+
+.logosmall {
+  width: 200px;
+  height: 200px;
+  background-color: #092917;
+  padding-top: 25px;
+}
+
+.lower {
+  margin-top: 20px;
+}
+
+.panel-body {
+  font-size: 17px;
+  background-color: #25A35A ;
+  border-color: #1C7A44 !important;
+  
+}
+
+.panel-heading {
+  font-size: 17px;
+  background-color: #1C7A44 !important;
+}
+
+.panel-default {
+  font-size: 17px;
+  border-color: #1C7A44 !important;
+
 }
 
 .resize-video {
-	float:right;
-	width:50%;
+	max-width:600px;
 	padding:10px;
+	margin: 0 auto;
 }
 
-#home-image {
-	float:right;
-	width:50%;
+.sponsor {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
-button.login {
-	float:right;
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #43D17F;
 }
 
-.pad-input {
-	margin-right:800px !important;
+.top {
+  margin-top: 0px;
+}
+
+.wellprod{
+  height: 490px;
+}
+
+.well.GFB {
+  background-color: #25A35A;
+  border-color: #1C7A44;
+}
+
+.well.GFB.box-table {
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: #25A35A;
+  border-color: #1C7A44;
+  margin-bottom: 5px;
+}
+
+.well.GFBB {
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px;
+  max-width: 400px;
+  background-color: #1C7A44;
+  border-color: #12522D;
 }
