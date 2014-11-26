@@ -75,4 +75,10 @@ class ProjectorViews(Layouts):
 		
 	@view_config(renderer="templates/edit_sale.pt", name="editSale")
 	def view_editSale(self):
+		customer_name = self.request.POST.get('customer_name')
+		username = self.request.POST.get('username')
+		phone = self.request.POST.get('phone')
+		small_quant = self.request.POST.get('small_quant')
+		large_quant = self.request.POST.get('large_quant')
+		addOrder(customer_name, username, phone, large_quant, small_quant)
 		return {"page_title": "Edit Sale"}
