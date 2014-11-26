@@ -60,7 +60,7 @@ class ProjectorViews(Layouts):
 	@view_config(renderer='json', name='test.json')
 	def test_json(self):
 		return {"data":"This is an AJAX call"}
-        
-    @view_config(renderer="templates/manage_sales.pt", name="sales")
-    def view_sales(self):
-        return {"page_title": "Manage Sales"}
+		
+	@view_config(renderer="templates/manage_sales.pt", name="sales")
+	def view_sales(self):
+		return {"page_title": "Manage Sales"}
