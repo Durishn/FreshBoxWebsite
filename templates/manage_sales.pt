@@ -17,7 +17,7 @@
                     </form>
                 </h5>
 
-            </div>-->
+            </div>!-->
             <form>
                 <table class="table table-hover table-condensed">
                     <tbody>
@@ -46,7 +46,7 @@
             </form>
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Orders</a>
         </div>
-        <script type="text/jquery">
+        <!--<script type="text/jquery">
         $(document).ready(function() {
             
           $(".clickableRow").click(function() {
@@ -58,6 +58,6 @@
             document.getElementById("hsid".value = val2;
         };
         });
-    </script>
+    </script>!-->
     </div>
 </div>
