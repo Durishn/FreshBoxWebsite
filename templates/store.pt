@@ -123,7 +123,7 @@
                 <div class="well GFB">
                     <h3>Product Information:</h3>
                     <h5>Choose box quantity upon checkout.</h5>
-                    <img class="img-circle logosmall" alt="Garden Fresh Box home logo" src="images/gfb_small.png">
+                    <img class="img-circle logosmall" alt="Garden Fresh Box home logo" src="static/images/gfb_small.png">
                     <form id="GFBform" action="#GFBform" method="post" class="ppform">
                         <input type="hidden" name="cmd" value="_cart">
                         <input type="hidden" name="upload" value="1">
