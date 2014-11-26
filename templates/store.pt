@@ -164,5 +164,10 @@
                     </form>  
                 </div>         
             </div>
+            <script> 
+        function HostSite(val){
+            document.getElementById("hs").value = val;
+        };
+    </script>
     </div>
 </div>
