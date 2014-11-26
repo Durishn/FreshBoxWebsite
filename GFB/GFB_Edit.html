@@ -72,65 +72,44 @@ Author: Nic Durish
 
         <!-- Main Page Content -->
         <div class="container theme-showcase" role="main">
-            <h3 class="left jumbotop">Order Manager :<hr></h3>
-            <div class="jumbotron jumboGFB">
-                <div class="well GFB jumbosquish2">
-                    <h5>View pending order's for :
-                        <div class="input-group contact-field hostform">
-                            <input readonly="readonly" type="text" id="hs" class="form-control ">
-                            <div id="HostSite" class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Host-Sites <span class="caret"></span></button>
-                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                    <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
-                                    <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
-                                    <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
-                                </ul> 
-                            </div>
-                        </div>
-                    </h5>
-
-                </div>
+            <div class="jumbotron jumboGFB jumbosquish jumbotop">
+                <h3 class="left">User Information :<br><h6 class="left">*Optional Fields</h6><hr></h3>
                 <form>
-                    <table class="table table-hover table-condensed">
-                        <tbody>
-                            <tr>
-                                <th class="userhead1">Order #:</th>
-                                <th class="userhead1">Full Name:</th>
-                                <th class="userhead1">E-mail:</th>
-                                <th class="userhead1">Phone:</th>
-                                <th class="userhead1"># of Small Boxes:</th>
-                                <th class="userhead1"># of Large Boxes:</th>
-                                <th class="userhead1">Total Price:</th>
-                                <th class="userhead1">Paid</td>
-
-                            </tr>
-                            <tr class='clickableRow usercell' href='#'>
-                                <td class="usercell">0000000</td>
-                                <td class="usercell">Nic Durish</td>
-                                <td class="usercell">N.Durish@gmail.com</td>
-                                <td class="usercell">(123) 456-7890</td>
-                                <td class="usercell">2</td>
-                                <td class="usercell">1</td>
-                                <td class="usercell">$50</td>
-                                <td class="usercell"><input type="checkbox" data-toggle="modal" data-target="#myModal"></td>
-
-                            </tr>
-                            <tr class='clickableRow usercell' href='index.html'>
-                                <td class="usercell">0000001</td>
-                                <td class="usercell">Joe McFlow</td>
-                                <td class="usercell">example@Sympatico.com</td>
-                                <td class="usercell">(123) 456-7890</td>
-                                <td class="usercell">1</td>
-                                <td class="usercell">1</td>
-                                <td class="usercell">$35</td>
-                                <td class="usercell"><input type="checkbox" data-toggle="modal" data-target="#myModal"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Username:</span>
+                        <input type="text" class="form-control store" placeholder="DJohn">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">First Name:</span>
+                        <input type="text" class="form-control store" placeholder="John">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Last Name:</span>
+                        <input type="text" class="form-control store" placeholder="Doe">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Email:</span>
+                        <input type="text" class="form-control store" placeholder="J.Doe@gmail.com">
+                    </div>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">* Phone:</span>
+                        <input type="text" class="form-control store" placeholder="(012) 345-6789">
+                    </div>
+                    <div class="input-group contact-field1 SIZE">
+                        <span class="input-group-addon">User Type:</span>
+                        <input readonly="readonly" type="text" id="hs" class="form-control store">
+                        <div id="HostSite" class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
+                                <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
+                                <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
+                            </ul> 
+                        </div>
+                    </div>
                 </form>
-                <h6 class="center"> * Click on checkbox to mark as paid.</h6>
-                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_Edit-User.html" role="button">Add Orders</a>
-                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_Edit.html" role="button">Save Changes</a>
+                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_Manage-Accounts" role="button">Cancel</a>
+                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Save Changes</a>
             </div>
 
 

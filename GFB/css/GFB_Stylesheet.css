@@ -76,6 +76,11 @@ span.input-group-addon.IGA {
   margin: 0 auto;
 }
 
+.SIZE{
+  max-width:430px;
+  margin: 0 auto;
+}
+
 .center{
   text-align:center;
 }
