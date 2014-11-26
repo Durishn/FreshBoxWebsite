@@ -97,13 +97,12 @@ Author: Nic Durish
                     </div>
                     <div class="input-group contact-field1 SIZE">
                         <span class="input-group-addon">User Type:</span>
-                        <input readonly="readonly" type="text" id="hs" class="form-control store">
+                        <input readonly="readonly" type="text" id="usertext" class="form-control store">
                         <div id="HostSite" class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
-                                <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
-                                <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
+                                <li><a onclick="UserType('Administrator'); return false;" href="#">Administrator</a></li> 
+                                <li><a onclick="UserType('Coordinator'); return false;" href="#">Coordinator</a></li>
                             </ul> 
                         </div>
                     </div>
@@ -155,6 +154,11 @@ Author: Nic Durish
                 window.document.location = $(this).attr("href");
           });
         });
+    </script>
+    <script>
+        function UserType(val){
+            document.getElementById("usertext").value = val;
+        };
     </script>
 </body>
 </html>
