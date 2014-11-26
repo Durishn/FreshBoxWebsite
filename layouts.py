@@ -42,7 +42,9 @@ class Layouts(object):
 	@reify
 	def get_orders(self):
 		retVal = []
-		hostsite_id = self.request.POST.get('hsid')
-		if (hostsite_id != None):
-			retVal = getOrders(hostsite_id)
-		return retVal
+		return getAllOrders()
+		
+		#hostsite_id = self.request.POST.get('hsid')
+		#if (hostsite_id != None):
+		#	retVal = getOrders(hostsite_id)
+		#return retVal
