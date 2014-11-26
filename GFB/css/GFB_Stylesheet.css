@@ -76,8 +76,7 @@ span.input-group-addon.IGA {
   margin: 0 auto;
 }
 
-.SIZE{
-  max-width:430px;
+.IGA2{
   margin: 0 auto;
   margin-top: 5px;
 }
@@ -151,6 +150,10 @@ span.input-group-addon.IGA {
 
 .input-group-addon.IGA {
   min-width: 175px
+}
+
+.input-group-addon.IGA1 {
+  min-width: 100px
 }
 
 .jumbocontent {

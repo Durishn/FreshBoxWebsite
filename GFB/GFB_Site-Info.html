@@ -9,8 +9,8 @@ Author: Nic Durish
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GFB: Order Manager</title>
-    <meta name="description" content="Order Manager for Garden Fresh Box">
+    <title>GFB: Site Info Manager</title>
+    <meta name="description" content="Site Info for Garden Fresh Box">
     <meat name="author" content="Fresh Solutions">
     
     <!-- Linked Files -->
@@ -73,26 +73,34 @@ Author: Nic Durish
         <!-- Main Page Content -->
         <div class="container theme-showcase" role="main">
             <div class="jumbotron jumboGFB jumbosquish jumbotop">
-                <h3 class="left top">User Information :<br><h6 class="left">*Optional Fields</h6><hr></h3>
+                <h3 class="left top">Host-Site Information :<br><h6 class="left">*Optional Fields</h6><hr></h3>
                 <form>
                     <div class="input-group contact-field">
-                        <span class="input-group-addon IGA">Username:</span>
-                        <input type="text" class="form-control store" placeholder="DJohn">
+                        <span class="input-group-addon IGA">Site Name</span>
+                        <input type="text" class="form-control store" placeholder="Example Name">
                     </div>
                     <div class="input-group contact-field">
-                        <span class="input-group-addon IGA">First Name:</span>
-                        <input type="text" class="form-control store" placeholder="John">
+                        <span class="input-group-addon IGA">City:</span>
+                        <input type="text" class="form-control store" placeholder="Guelph">
                     </div>
                     <div class="input-group contact-field">
-                        <span class="input-group-addon IGA">Last Name:</span>
+                        <span class="input-group-addon IGA">Postal Code:</span>
                         <input type="text" class="form-control store" placeholder="Doe">
                     </div>
-                    <div class="input-group contact-field">
-                        <span class="input-group-addon IGA">Email:</span>
-                        <input type="text" class="form-control store" placeholder="J.Doe@gmail.com">
+                    <div class="input-group contact-field1 IGA2">
+                        <span class="input-group-addon">User Type:</span>
+                        <input readonly="readonly" type="text" id="hs" class="form-control store">
+                        <div id="HostSite" class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
+                                <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
+                                <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
+                            </ul> 
+                        </div>
                     </div>
                     <div class="input-group contact-field">
-                        <span class="input-group-addon IGA">* Phone:</span>
+                        <span class="input-group-addon IGA">Street</span>
                         <input type="text" class="form-control store" placeholder="(012) 345-6789">
                     </div>
                     <div class="input-group contact-field1 SIZE">
