@@ -23,21 +23,21 @@
                     <span class="input-group-addon IGA">* Phone:</span>
                     <input type="text" class="form-control store" placeholder="(012) 345-6789">
                 </div>
-                <div class="input-group contact-field1 SIZE">
-                    <span class="input-group-addon">User Type:</span>
-                    <input readonly="readonly" type="text" id="hs" class="form-control store">
-                    <div id="HostSite" class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
-                            <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
-                            <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
-                        </ul> 
+                <div class="input-group contact-field1 SIZE1">
+                        <span class="input-group-addon">User Type:</span>
+                        <input readonly="readonly" type="text" id="usertext" class="form-control store">
+                        <div id="HostSite" class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a onclick="UserType('Administrator'); return false;" href="#">Administrator</a></li> 
+                                <li><a onclick="UserType('Coordinator'); return false;" href="#">Coordinator</a></li>
+                            </ul> 
+                        </div>
                     </div>
-                </div>
             </form>
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_Manage-Accounts" role="button">Cancel</a>
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Save Changes</a>
         </div>
     </div>
 </div>
+
