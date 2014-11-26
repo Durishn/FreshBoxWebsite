@@ -1,5 +1,7 @@
 <div metal:use-macro="view.global_template">
     <div metal:fill-slot="content">
+
+        <!-- Top Jumbtron -->
         <div class="jumbotron jumbosquish jumboGFB jumbotop">
                 <h1>Get a Garden Fresh Box</h1>
                     <h2>What's in the box?</h2>
@@ -79,6 +81,7 @@
                 </div>
             </div>
 
+            <!-- Middle Jumbtron -->
             <div class="jumbotron jumbosquish jumboGFB jumbomid ">
                 <div class="well GFB">
                     <h3>Contact Information:<br><h6>*Optional Fields</h6></h3>
@@ -104,7 +107,6 @@
                         </h5>
                     </div>
                 </div>
-
                 <div class="well GFB">
                     <h3>Pickup Information:</h3>
                     <div class="input-group contact-field">
@@ -137,10 +139,9 @@
 
                         <input class="donation" type="hidden" name="item_name" value="Donation">
                         
-
-                        <!-- Quantity of Small Box input !-->
-                        <!--<input class="inval" ref="smallbox" type="text" name="quantity" value="0">!-->
                         <div class="well GFBB">
+
+                            <!-- Quantity of Small Box input !-->
                             <div class="input-group contact-field">
                                     <span class="input-group-addon IGA">Number of Small Boxes - ($15):</span>
                                     <input type="text" name="quantity" value="" ref="smallbox" class="inval form-control store" placeholder="# of boxes">
@@ -153,7 +154,7 @@
                             </div>
 
 
-                            <!-- Quantity of donations in dollars !-->
+                            <!-- Quantity of Donations in Dollars !-->
                             <div class="input-group contact-field">
                                 <span class="input-group-addon IGA">Add a Donation:</span>
                                 <input type="text" name="amount" value="" ref="donation" class="inval form-control store" placeholder="0.00">
