@@ -16,7 +16,7 @@ Author: Nic Durish
     <!-- Linked Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/GFB_Stylesheet.css" />
-    <link rel="javascript" type="text/javascript" href="js/gfb.js" />
+    <link rel="javascript" type="text/javascript" href="js/gfb.js"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 
@@ -193,7 +193,7 @@ Author: Nic Durish
                                 <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
                             </ul> 
                         </div>
-                    </div><h5><a id="findbox" target="_new" href="http://batchgeo.com/map/d1c1926978f6426dbcd57d1f8f234de5" class="GFB-link">See Host-Site Locations!</a></h5>
+                    </div><h5><a id="findbox" href="#findbox" class="GFB-link">See Host-Site Locations!</a></h5>
                 </div>
                 
                 
@@ -244,6 +244,10 @@ Author: Nic Durish
                 </div>         
             </div>
 
+
+
+
+
             <!-- Footer -->
             <div class="footer">
                 <h3>Made possible with the help of:</h3>
@@ -263,14 +267,10 @@ Author: Nic Durish
     <script src="js/bootstrap.min.js"></script>
     <script src="js/gfb.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script rel="javascript" type="text/js">
-        function reply_click(element){
-            document.getElementById('product_name').value = element.getAttribute('data-product-name');
-        }   
-        
+    <script> 
         function HostSite(val){
             document.getElementById("hs").value = val;
-        }
+        };
     </script>
 </body>
 </html>
