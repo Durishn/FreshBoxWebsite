@@ -9,11 +9,12 @@
                 <input type="email" name="username" id="username" class="form-control" placeholder="Email address" required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password"name="password" id="password" class="form-control" placeholder="Password" required>
-                <div class="checkbox">
+                <h5><a href="#" data-toggle="modal" data-target="#myModal" class="GFB-link">Forgot your Password?</a></h5>
+                <!--<div class="checkbox">
                         <label>
                             <input type="checkbox" value="remember-me"> Remember me
                         </label>
-                    </div>
+                    </div>-->
                 <button class="btn btn-lg btn-default jumbobut btn-block" type="submit">Sign in</button>
                 <a class="btn btn-lg btn-default jumbobut btn-block" href="/" role="button">Cancel</a>
             </form>
@@ -28,7 +29,7 @@
                                     <h3 class="modal-title center" id="myModalLabel">The Garden Fresh Box Team</h3>
                                 </div>
                                 <div class="modal-body">
-                                
+                                <h4>Forgot your password?<br>Enter your e-mail address in the field below and we'll send you a recovery link.</h4>
                                 <div class="input-group">
                                     <span class="input-group-addon">Email:</span>
                                     <input type="text" class="form-control" placeholder="J.Doe@gmail.com">
@@ -48,6 +49,7 @@
                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                     <h3 class="modal-title center" id="myModalLabel">The Garden Fresh Box Team</h3>
                                 </div>
+                                <h4>Your recovery link has been sent.<br>It may take a few minutes.</h4>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                                 </div>
