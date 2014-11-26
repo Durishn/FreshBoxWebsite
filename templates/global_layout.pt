@@ -65,20 +65,17 @@
             </div>
         </nav>
 
-        <!-- Main Page Content -->
-        <div metal:define-slot="content" class="container theme-showcase" role="main">
             
 
-            <!-- Footer -->
-            <div class="footer">
-                <h3>Made possible with the help of:</h3>
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/OHC.png">
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/MCYS.png">
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/WWLHC.png">
-                <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/Shield.png">
-                <br><br><p>Press <kbd>ctrl +</kbd> to increase text size, and <kbd>ctrl -</kbd> to decrease text size.</p>
-                <p><small> Copyright &copy; FreshSolutions </small></p>
-            </div>
+        <!-- Footer -->
+        <div class="footer">
+            <h3>Made possible with the help of:</h3>
+            <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/OHC.png">
+            <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/MCYS.png">
+            <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/WWLHC.png">
+            <img class="sponsor" alt="Garden Fresh Box home logo" src="static/images/Shield.png">
+            <br><br><p>Press <kbd>ctrl +</kbd> to increase text size, and <kbd>ctrl -</kbd> to decrease text size.</p>
+            <p><small> Copyright &copy; FreshSolutions </small></p>
         </div>
 
     </div>

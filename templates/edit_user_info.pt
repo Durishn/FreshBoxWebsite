@@ -25,7 +25,7 @@
                     <span class="input-group-addon IGA">* Phone:</span>
                     <input type="text" class="form-control store" placeholder="(012) 345-6789">
                 </div>
-                <div class="input-group contact-field1 SIZE1">
+                <div class="input-group contact-field1">
                         <span class="input-group-addon">User Type:</span>
                         <input readonly="readonly" type="text" id="usertext" class="form-control store">
                         <div id="User" class="input-group-btn">

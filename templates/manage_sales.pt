@@ -4,7 +4,7 @@
         <h3 class="left jumbotop">Order Manager :<hr></h3>
         <div class="jumbotron jumboGFB">
             <form>
-                <table class="table table-hover table-condensed">
+                <table class="table table-condensed">
                     <tbody>
                         <tr>
                             <th class="userhead1">Order #:</th>

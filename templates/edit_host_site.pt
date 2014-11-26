@@ -17,7 +17,7 @@
                     <span class="input-group-addon IGA1">Postal Code:</span>
                     <input type="text" class="form-control store" placeholder="N1H 3C4">
                 </div>
-                <div class="input-group contact-field1 SIZE1">
+                <div class="input-group contact-field1">
                     <span class="input-group-addon">Province:</span>
                     <input readonly="readonly" type="text" id="province" class="form-control store">
                     <div id="Province" class="input-group-btn">
@@ -43,7 +43,7 @@
                     <span class="input-group-addon IGA1">Address:</span>
                     <input type="text" class="form-control store" placeholder="35 Yewholme Dr.">
                 </div>
-                <div class="input-group contact-field1 SIZE1">
+                <div class="input-group contact-field1">
                     <span class="input-group-addon">Coordinators:</span>
                     <input readonly="readonly" type="text" id="user" class="form-control store">
                     <div id="UserType" class="input-group-btn">
