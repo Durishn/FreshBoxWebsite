@@ -2,7 +2,7 @@
     <div metal:fill-slot="content">
         <h3 class="left jumbotop">Order Manager :<hr></h3>
         <div class="jumbotron jumboGFB">
-            <div class="well GFB jumbosquish2">
+            <!--<div class="well GFB jumbosquish2">
                 <h5>View pending order's for :
                     <form class="input-group contact-field hostform" method="POST" action="#">
                         <input readonly="readonly" type="text" id="hs" class="form-control ">
@@ -17,7 +17,7 @@
                     </form>
                 </h5>
 
-            </div>
+            </div>-->
             <form>
                 <table class="table table-hover table-condensed">
                     <tbody>
