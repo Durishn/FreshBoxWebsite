@@ -10,14 +10,14 @@
                         <th class="userhead">Site Name</th>
                         <th class="userhead">Address</th>
                     </tr>
-                    <tr tal:repeat="row view.get_host_sites" class='clickableRow usercell' onclick="window.document.location='manage_host_sites';">
+                    <tr tal:repeat="row view.get_host_sites" class='clickableRow usercell' onclick="window.document.location='editHostSite';">
                         <td class="usercell">${row.name}</td>
                         <td class="usercell">${row.address}</td>
                     </tr>
                 </tbody>
             </table>
             <h6 class="center"> * Click on table row, to edit element.</h6>
-            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="manage_host_sites.pt" role="button">Add Account</a>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="editHostSite" role="button">Add Account</a>
         </div>
     </div>
 </div>

@@ -31,7 +31,7 @@
                             <th class="userhead1">Total Price:</th>
 
                         </tr>
-                        <tr tal:repeat="order view.get_orders" class='clickableRow usercell' href='#'>
+                        <tr tal:repeat="order view.get_orders" class='clickableRow usercell' href=''>
                             <td class="usercell">${order.id}</td>
                             <td class="usercell">${order.customer_name}</td>
                             <td class="usercell">${order.customer_email}</td>
@@ -44,7 +44,7 @@
                     </tbody>
                 </table>
             </form>
-            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Orders</a>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="editSale" role="button">Add Orders</a>
         </div>
         <script type="text/jquery">
         $(document).ready(function() {

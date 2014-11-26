@@ -1,43 +1,69 @@
 <div metal:use-macro="view.global_template">
     <div metal:fill-slot="content">
+
+        <!-- Main Jumbotron -->
         <div class="jumbotron jumboGFB jumbosquish jumbotop">
-            <h3 class="left top">User Information :<br><h6 class="left">*Optional Fields</h6><hr></h3>
+            <h3 class="left top">Host-Site Information :<br><h6 class="left">*Optional Fields</h6><hr></h3>
             <form>
                 <div class="input-group contact-field">
-                    <span class="input-group-addon IGA">Username:</span>
-                    <input type="text" class="form-control store" placeholder="DJohn">
+                    <span class="input-group-addon IGA1">Site Name</span>
+                    <input type="text" class="form-control store" placeholder="Example Name">
                 </div>
                 <div class="input-group contact-field">
-                    <span class="input-group-addon IGA">First Name:</span>
-                    <input type="text" class="form-control store" placeholder="John">
+                    <span class="input-group-addon IGA1">City:</span>
+                    <input type="text" class="form-control store" placeholder="Guelph">
                 </div>
                 <div class="input-group contact-field">
-                    <span class="input-group-addon IGA">Last Name:</span>
-                    <input type="text" class="form-control store" placeholder="Doe">
+                    <span class="input-group-addon IGA1">Postal Code:</span>
+                    <input type="text" class="form-control store" placeholder="N1H 3C4">
                 </div>
-                <div class="input-group contact-field">
-                    <span class="input-group-addon IGA">Email:</span>
-                    <input type="text" class="form-control store" placeholder="J.Doe@gmail.com">
-                </div>
-                <div class="input-group contact-field">
-                    <span class="input-group-addon IGA">* Phone:</span>
-                    <input type="text" class="form-control store" placeholder="(012) 345-6789">
-                </div>
-                <div class="input-group contact-field1 SIZE">
-                    <span class="input-group-addon">User Type:</span>
-                    <input readonly="readonly" type="text" id="hs" class="form-control store">
-                    <div id="HostSite" class="input-group-btn">
+                <div class="input-group contact-field1 SIZE1">
+                    <span class="input-group-addon">Province:</span>
+                    <input readonly="readonly" type="text" id="province" class="form-control store">
+                    <div id="Province" class="input-group-btn">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                         <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
-                            <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
-                            <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
+                            <li><a onclick="Province('Alberta'); return false;" href="#">Alberta</a></li> 
+                            <li><a onclick="Province('British Columbia'); return false;" href="#">British Columbia</a></li> 
+                            <li><a onclick="Province('Manitoba'); return false;" href="#">Manitoba</a></li> 
+                            <li><a onclick="Province('New Brunswick'); return false;" href="#">New Brunswick</a></li> 
+                            <li><a onclick="Province('Newfoundland and Labrador'); return false;" href="#">Newfoundland and Labrador</a></li> 
+                            <li><a onclick="Province('Nova Scotia'); return false;" href="#">Nova Scotia</a></li> 
+                            <li><a onclick="Province('Ontario'); return false;" href="#">Ontario</a></li> 
+                            <li><a onclick="Province('Prince Edward Island'); return false;" href="#">Prince Edward Island</a></li> 
+                            <li><a onclick="Province('Quebec'); return false;" href="#">Quebec</a></li> 
+                            <li><a onclick="Province('Saskatchewan'); return false;" href="#">Saskatchewan</a></li> 
+                            <li><a onclick="Province('NW Territories'); return false;" href="#">NW Territories</a></li> 
+                            <li><a onclick="Province('Nunuvut'); return false;" href="#">Nunuvut</a></li> 
+                            <li><a onclick="Province('Yukon'); return false;" href="#">Yukon</a></li>   
+                        </ul> 
+                    </div>
+                </div>
+                <div class="input-group contact-field">
+                    <span class="input-group-addon IGA1">Address:</span>
+                    <input type="text" class="form-control store" placeholder="35 Yewholme Dr.">
+                </div>
+                <div class="input-group contact-field1 SIZE1">
+                    <span class="input-group-addon">Coordinators:</span>
+                    <input readonly="readonly" type="text" id="user" class="form-control store">
+                    <div id="UserType" class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a onclick="UserType('Nic D'); return false;" href="#">Nic D</a></li> 
+                            <li><a onclick="UserType('Example'); return false;" href="#">Example</a></li>  
+                            <li><a>Example User</a></li> 
                         </ul> 
                     </div>
                 </div>
             </form>
-            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_Manage-Accounts" role="button">Cancel</a>
-            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Save Changes</a>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="hostsites" role="button">Cancel</a>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="hostsites" role="button">Save Changes</a>
+            </div>
         </div>
+        <script> 
+            function HostSite(val){
+                document.getElementById("hs").value = val;
+            };
+        </script>
     </div>
 </div>
