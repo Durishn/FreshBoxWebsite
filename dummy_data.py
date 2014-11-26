@@ -188,11 +188,22 @@ def getHostSite(hostSiteID):
 		return {'id':rows[0][0], 'name':rows[0][1]}
 	return None
 	
-def addOrder(customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, donation, total_paid, hostsite):
+#def addOrder(customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, donation, total_paid, hostsite):
+#	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+#	cur = conn.cursor()
+#	cur.execute("INSERT INTO public.\"Orders\" (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid, \"hostsitepickup_idFK\") VALUES (" 
+#	+ "'" + customer_first_name + "', '" + customer_last_name + "', '" + customer_email + "', '" + customer_phone + "', '" + large_quant + "', '" + small_quant + "', '" + donation + "', '" + total_paid + "', '" + hostsite + "')")
+#	conn.commit()
+	
+def addOrder(customer_name, username, phone, large_quant, small_quant):
+	if(customer_name == None or username == None or phone == None or large_quant == None or small_quant == None):
+		return ""
+	print("Test")
+
 	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
 	cur = conn.cursor()
-	cur.execute("INSERT INTO public.\"Orders\" (customer_first_name, customer_last_name, customer_email, customer_phone, large_quantity, small_quantity, donation, total_paid, \"hostsitepickup_idFK\") VALUES (" 
-	+ "'" + customer_first_name + "', '" + customer_last_name + "', '" + customer_email + "', '" + customer_phone + "', '" + large_quant + "', '" + small_quant + "', '" + donation + "', '" + total_paid + "', '" + hostsite + "')")
+	cur.execute("INSERT INTO public.\"Orders\" (customer_first_name, customer_email, customer_phone, large_quantity, small_quantity, donation) VALUES (" 
+	+ "'" + customer_name + "', '" + customer_email + "', '" + customer_phone + "', '" + large_quant + "', '" + small_quant + "', '" + "0" + "')")
 	conn.commit()
 	
 def updateOrder(order_id, customer_first_name, customer_last_name, customer_email, customer_phone, large_quant, small_quant, donation, total_paid, hostsite):
