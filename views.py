@@ -31,14 +31,6 @@ class ProjectorViews(Layouts):
 	def store_view(self):
 		return {"page_title": "Store"}
 
-	@view_config(renderer="templates/edit_host_site.pt", name="edit_host")
-	def store_view(self):
-		return {"page_title": "Edit Host Site"}
-
-	@view_config(renderer="templates/edit_user_info.pt", name="edit_user")
-	def store_view(self):
-		return {"page_title": "Edit User Info"}
-
 	@view_config(renderer="templates/about_us.pt", name="about")
 	def company_view(self):
 		return {"page_title": "About Us"}
