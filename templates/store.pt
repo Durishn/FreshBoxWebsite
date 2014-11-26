@@ -183,7 +183,9 @@
                             count++;
                     }
                 });
-    });
+                });
+
+                $("#buy").addClass("active");
             </script>
     </div>
 </div>

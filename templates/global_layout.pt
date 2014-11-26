@@ -42,10 +42,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
-                        <li><a href="contact">Contact Us</a></li>
+                        <li><a id="home" href="/">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a id="contact" href="contact">Contact Us</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn More<span class="caret"></span></a>
+                            <a id="learn" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn More<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation" class="dropdown-header">About:</li>
                                 <li><a href="about">Garden Fresh Box</a></li>
@@ -53,7 +53,7 @@
                                 <li><a href="http://www.guelphchc.ca/healthy-living/food-health/guelph-wellington-local-food-initiative">The Guelph Wellington Local Food Initiative</a></li>
                             </ul>
                         </li>
-                        <li><a href="store">Purchase A Box</a></li>
+                        <li><a id="buy" href="store">Purchase A Box</a></li>
                     </ul>
                     
                     <ul tal:repeat="menu view.site_menu" class="nav navbar-nav navbar-right">

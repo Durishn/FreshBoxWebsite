@@ -15,4 +15,8 @@
             <p>The GuelphCHC is a government funded organization, we are committed to working with the community to provide access to health services, and to create opportunities for people to improve their well-being. The GuelphCHC is currently involved in over 30 unique community-oriented programs. The mission of the Garden Fresh Box program is to help the residents of the City of Guelph access affordable and fresh produce. It aims to support our local farmers and economy. We hope that our efforts will increase knowledge of food insecurity, nutrition, and to support environmentally sound management practices. <br><br>A Garden Fresh Box costs $15 for a small box and $20 for a large box. These boxes are full of fresh produce such as: apples, onions, carrots, beets, pears, peppers, lettuce, and tomato. Almost all of the included fruits and vegetables were grown in the community, this encourage healthy eating of seasonal, local fruits and vegetables. To complete their mission, the GuelphCHC administrators need to collaborate with various volunteers, food donors, and host-sites in the community</p>
         </div>
     </div>
+
+    <script> 
+            $("#learn").addClass("active");
+        </script>
 </div>

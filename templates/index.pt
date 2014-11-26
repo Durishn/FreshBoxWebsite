@@ -50,5 +50,10 @@
                 </div>
             </div>
         </div>
+
+
+         <script> 
+            $("#contact").addClass("active");
+        </script>
     </div>
 </div>
