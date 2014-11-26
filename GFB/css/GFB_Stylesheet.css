@@ -58,6 +58,10 @@ span.input-group-addon.IGA {
   width:230px;
 }
 
+span.input-group-addon.IGA1 {
+  width:130px;
+}
+
 .acntbtn {
   margin-top: 20px;
   margin-bottom: 0px ;
@@ -76,7 +80,14 @@ span.input-group-addon.IGA {
   margin: 0 auto;
 }
 
-.IGA2{
+.SIZE{
+  max-width:430px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.SIZE{
+  max-width:430px;
   margin: 0 auto;
   margin-top: 5px;
 }
@@ -152,9 +163,6 @@ span.input-group-addon.IGA {
   min-width: 175px
 }
 
-.input-group-addon.IGA1 {
-  min-width: 100px
-}
 
 .jumbocontent {
   margin: 0;
