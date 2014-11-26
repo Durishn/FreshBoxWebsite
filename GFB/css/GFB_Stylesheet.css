@@ -79,6 +79,7 @@ span.input-group-addon.IGA {
 .SIZE{
   max-width:430px;
   margin: 0 auto;
+  margin-top: 5px;
 }
 
 .center{
@@ -143,7 +144,6 @@ span.input-group-addon.IGA {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
 }
-
 
 .img-circle.logosmall {
   margin-top: 25px;
@@ -269,7 +269,11 @@ span.input-group-addon.IGA {
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color:   #43D17F;
+  background-color: #43D17F;
+}
+
+.top {
+  margin-top: 0px;
 }
 
 .wellprod{
