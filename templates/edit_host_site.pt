@@ -1,0 +1,43 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <div class="jumbotron jumboGFB jumbosquish jumbotop">
+            <h3 class="left top">User Information :<br><h6 class="left">*Optional Fields</h6><hr></h3>
+            <form>
+                <div class="input-group contact-field">
+                    <span class="input-group-addon IGA">Username:</span>
+                    <input type="text" class="form-control store" placeholder="DJohn">
+                </div>
+                <div class="input-group contact-field">
+                    <span class="input-group-addon IGA">First Name:</span>
+                    <input type="text" class="form-control store" placeholder="John">
+                </div>
+                <div class="input-group contact-field">
+                    <span class="input-group-addon IGA">Last Name:</span>
+                    <input type="text" class="form-control store" placeholder="Doe">
+                </div>
+                <div class="input-group contact-field">
+                    <span class="input-group-addon IGA">Email:</span>
+                    <input type="text" class="form-control store" placeholder="J.Doe@gmail.com">
+                </div>
+                <div class="input-group contact-field">
+                    <span class="input-group-addon IGA">* Phone:</span>
+                    <input type="text" class="form-control store" placeholder="(012) 345-6789">
+                </div>
+                <div class="input-group contact-field1 SIZE">
+                    <span class="input-group-addon">User Type:</span>
+                    <input readonly="readonly" type="text" id="hs" class="form-control store">
+                    <div id="HostSite" class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a onclick="HostSite('CSA FoodBank - 123 Example St.'); return false;" href="#">CSA Foodbank</a></li> 
+                            <li><a onclick="HostSite('Evergreens Senior Center - 52 NoName Dr.'); return false;" href="#">Evergreen's Senior Center</a></li> 
+                            <li><a onclick="HostSite('Green Hill East Neighbourhood Group - 34 Example St.'); return false;" href="#">Green Hill East Neighbourhood Group</a></li>   
+                        </ul> 
+                    </div>
+                </div>
+            </form>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_Manage-Accounts" role="button">Cancel</a>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Save Changes</a>
+        </div>
+    </div>
+</div>
