@@ -41,6 +41,13 @@ th.userhead{
   border-color: #1C7A44 !important;
 }
 
+th.userhead1{
+  background-color: #1C7A44 !important;
+  text-align: center;
+  font-size: 14px;
+  border-color: #1C7A44 !important;
+}
+
 td.usercell{
   font-size: 14px;
   padding: 1px;
@@ -67,6 +74,10 @@ span.input-group-addon.IGA {
 .contact-field {
   padding: 5px;
   margin: 0 auto;
+}
+
+.center{
+  text-align:center;
 }
 
 .footer {
@@ -159,6 +170,12 @@ span.input-group-addon.IGA {
 .jumbosquish {
   max-width: 800px;
   margin: 0 auto ;
+}
+
+.jumbosquish2 {
+  max-width: 800px;
+  margin: 0 auto ;
+  margin-bottom:30px;
 }
 
 .jumbotop {

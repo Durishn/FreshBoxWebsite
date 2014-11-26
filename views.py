@@ -27,7 +27,7 @@ class ProjectorViews(Layouts):
 	def host_site_view(self):
 		return {"page_title": "Manage Host Sites"}
     
-    @view_config(renderer="templates/store.pt", name="store")
+	@view_config(renderer="templates/store.pt", name="store")
 	def store_view(self):
 		return {"page_title": "Store"}
 
@@ -60,4 +60,7 @@ class ProjectorViews(Layouts):
 	@view_config(renderer='json', name='test.json')
 	def test_json(self):
 		return {"data":"This is an AJAX call"}
-
+		
+	@view_config(renderer="templates/manage_sales.pt", name="sales")
+	def view_sales(self):
+		return {"page_title": "Manage Sales"}

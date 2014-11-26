@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
     function reply_click(element){
         document.getElementById('product_name').value = element.getAttribute('data-product-name');
     };   
