@@ -216,6 +216,17 @@ def getOrders(hostSiteID):
 		dictionary.append(order);
 	return dictionary
 
+def getAllOrders():
+	conn = psycopg2.connect("dbname='postgres' user='postgres' password='password'")
+	cur = conn.cursor()
+	cur.execute("SELECT o.id, o.customer_first_name, o.customer_last_name, o.customer_email, o.customer_phone, o.large_quantity, o.small_quantity, o.donation, o.total_paid FROM public.\"Orders\" o")
+	rows = cur.fetchall()
+
+	dictionary = []
+	for row in rows:
+		order = {'id':row[0], 'customer_name':row[1] + row[2], 'customer_email':row[3], 'customer_phone':row[4], 'large_quant':row[5], 'small_quant':row[6], 'donation':row[7], 'amount_paid':row[8]}
+		dictionary.append(order);
+	return dictionary
 	
 def getMenu(self):
 	retVal = []
