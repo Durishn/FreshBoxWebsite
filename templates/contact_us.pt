@@ -1,5 +1,7 @@
 <div metal:use-macro="view.global_template">
     <div metal:fill-slot="content">
+
+        <!-- Main Jumbotron !-->
         <div class="jumbotron jumboGFB jumbosquish jumbotop">
             <h3>Have a Question or Concern? <br>Interested in volunteering or coordinating a host site?<br><br></h3>
             <address>
