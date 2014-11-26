@@ -26,7 +26,7 @@
                 <div class="input-group contact-field1 SIZE1">
                         <span class="input-group-addon">User Type:</span>
                         <input readonly="readonly" type="text" id="usertext" class="form-control store">
-                        <div id="HostSite" class="input-group-btn">
+                        <div id="User" class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                             <ul class="dropdown-menu dropdown-menu-right" role="menu">
                                 <li><a onclick="UserType('Administrator'); return false;" href="#">Administrator</a></li> 
@@ -38,6 +38,19 @@
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="users" role="button">Cancel</a>
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="users" role="button">Save Changes</a>
         </div>
+        <script type="text/javascript">
+        function reply_click(element)
+        {
+            document.getElementById('product_name').value = element.getAttribute('data-product-name');
+        }   
+
+
+        function UserType(val){
+            document.getElementById("usertext").value = val;
+        } 
+        </script>
     </div>
 </div>
+
+
 
