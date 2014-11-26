@@ -9,7 +9,7 @@ class ProjectorViews(Layouts):
 
 	def __init__(self, request):
 		self.request = request
-        
+
 	@view_config(renderer="templates/index.pt")
 	def index_view(self):
 		return {"page_title": "Home"}
@@ -26,16 +26,16 @@ class ProjectorViews(Layouts):
 	@view_config(renderer="templates/manage_host_sites.pt", name="hostsites")
 	def host_site_view(self):
 		return {"page_title": "Manage Host Sites"}
-    
+
 	@view_config(renderer="templates/store.pt", name="store")
 	def store_view(self):
 		return {"page_title": "Store"}
-    
-    @view_config(renderer="templates/edit_host_site.pt", name="edit_host")
+
+	@view_config(renderer="templates/edit_host_site.pt", name="edit_host")
 	def store_view(self):
 		return {"page_title": "Edit Host Site"}
-    
-    @view_config(renderer="templates/edit_user_info.pt", name="edit_user")
+
+	@view_config(renderer="templates/edit_user_info.pt", name="edit_user")
 	def store_view(self):
 		return {"page_title": "Edit User Info"}
 
