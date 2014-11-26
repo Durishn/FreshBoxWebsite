@@ -1,14 +1,26 @@
 <div metal:use-macro="view.global_template">
     <div metal:fill-slot="content">
-        <div class="jumbotron jumboGFB jumbotop jumbolog">
-                <form class="form-signin" role="form" method="POST">
-                    <h2 class="form-signin-heading">Please sign in</h2>
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" name="username" id="username" class="form-control" placeholder="Email address" required autofocus>
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password"name="password" id="password" class="form-control" placeholder="Password" required>
 
-                    <div class="modal fade" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!-- Jumbotron -->
+        <div class="jumbotron jumboGFB jumbotop jumbolog">
+            <form class="form-signin" role="form" method="POST">
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" name="username" id="username" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password"name="password" id="password" class="form-control" placeholder="Password" required>
+                <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                <button class="btn btn-lg btn-default jumbobut btn-block" type="submit">Sign in</button>
+                <a class="btn btn-lg btn-default jumbobut btn-block" href="/" role="button">Cancel</a>
+            </form>
+        </div>
+
+        <!-- Forgot Pass Modals -->
+        <div class="modal fade" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -42,10 +54,5 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <button class="btn btn-lg btn-default jumbobut btn-block" type="submit">Sign in</button>
-                    <a class="btn btn-lg btn-default jumbobut btn-block" href="/" role="button">Cancel</a>
-                </form>
-            </div>
     </div>
 </div>

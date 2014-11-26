@@ -25,6 +25,7 @@ Author: Nic Durish
         <!-- Main Page Content -->
         <div class="container theme-showcase" role="main">
             
+            <!-- Top Jumbotron -->
             <div class="jumbotron jumboGFB jumbotop jumbolog">
                 <form class="form-signin" role="form" method="POST">
                     <h2 class="form-signin-heading">Please sign in</h2>
@@ -33,44 +34,7 @@ Author: Nic Durish
                     <label for="inputPassword" class="sr-only">Password</label>
                     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
-                    <h5><a href="#" data-target="#myModal" data-toggle="modal" class="GFB-link">Forgot your password?</a></h5>
-                    <div class="modal fade" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <h3 class="modal-title center" id="myModalLabel">The Garden Fresh Box Team</h3>
-                                </div>
-                                <div class="modal-body">
-                                <h4>Forgot your password?<br>Enter your e-mail address in the field below and we'll send you a recovery link.</h4>
-                                <div class="input-group">
-                                    <span class="input-group-addon">Email:</span>
-                                    <input type="text" class="form-control" placeholder="J.Doe@gmail.com">
-                                </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-target="#myModal2" data-toggle="modal">Send</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="myModal2"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <h3 class="modal-title center" id="myModalLabel">The Garden Fresh Box Team</h3>
-                                </div>
-                                <div class="modal-body">
-                                <h4>Your recovery link has been sent.<br>It may take a few minutes.</h4>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" value="remember-me"> Remember me
@@ -89,6 +53,45 @@ Author: Nic Durish
 
         </div>
 
+        <!-- Forgot Pass Modals -->
+        <h5><a href="#" data-target="#myModal" data-toggle="modal" class="GFB-link">Forgot your password?</a></h5>
+        <div class="modal fade" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h3 class="modal-title center" id="myModalLabel">The Garden Fresh Box Team</h3>
+                    </div>
+                    <div class="modal-body">
+                    <h4>Forgot your password?<br>Enter your e-mail address in the field below and we'll send you a recovery link.</h4>
+                    <div class="input-group">
+                        <span class="input-group-addon">Email:</span>
+                        <input type="text" class="form-control" placeholder="J.Doe@gmail.com">
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-target="#myModal2" data-toggle="modal">Send</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal2"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h3 class="modal-title center" id="myModalLabel">The Garden Fresh Box Team</h3>
+                    </div>
+                    <div class="modal-body">
+                    <h4>Your recovery link has been sent.<br>It may take a few minutes.</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
