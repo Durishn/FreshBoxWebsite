@@ -5,8 +5,9 @@ $(document).ready(function(){
         document.getElementById('product_name').value = element.getAttribute('data-product-name');
     };   
 
-    function HostSite(val){
+    function HostSite(val,val2){
         document.getElementById("hs").value = val;
+        document.getElementById("hsid".value = val2;
     };
             
     $(".clickableRow").click(function() {        

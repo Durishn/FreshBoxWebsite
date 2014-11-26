@@ -6,7 +6,7 @@
                 <h5>View pending order's for :
                     <form class="input-group contact-field hostform" method="POST" action="#">
                         <input readonly="readonly" type="text" id="hs" class="form-control ">
-                        <input type="hidden" name="hsid" value="-1">
+                        <input type="hidden" id="hsid" name="hsid" value="-1">
                         <div id="HostSite" class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Host-Sites <span class="caret"></span></button>
                             <ul tal:repeat="hostsite view.get_host_sites" class="dropdown-menu dropdown-menu-right" role="menu">
@@ -53,6 +53,10 @@
                 
                 window.document.location = $(this).attr("href");
           });
+          function HostSite(val,val2){
+            document.getElementById("hs").value = val;
+            document.getElementById("hsid".value = val2;
+        };
         });
     </script>
     </div>
