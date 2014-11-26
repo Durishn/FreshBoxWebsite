@@ -1,5 +1,7 @@
 <div metal:use-macro="view.global_template">
     <div metal:fill-slot="content">
+
+        <!-- Main Jumbotron -->
         <h3 class="left jumbotop">Account Manager :<hr></h3>
         <div class="jumbotron jumboGFB jumbosquish">
             <table class="table table-hover table-condensed usertable">
@@ -10,7 +12,7 @@
                         <th class="userhead">Full Name</th>
                         <th class="userhead">Phone Number</th>
                     </tr>
-                    <tr tal:repeat="row view.get_users" class='clickableRow usercell' onclick="window.document.location='#';">
+                    <tr tal:repeat="row view.get_users" class='usercell' onclick="window.document.location='edit_user_info';">
                         <td class="usercell">${row.credentials}</td>
                         <td class="usercell">${row.email}</td>
                         <td class="usercell">${row.first_name} ${row.last_name}</td>
@@ -19,7 +21,7 @@
                 </tbody>
             </table>
             <h6 class="center"> * Click on table row, to edit element.</h6>
-            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Account</a>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="edit_user_info" role="button">Add Account</a>
         </div>
     </div>
 </div>
