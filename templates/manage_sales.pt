@@ -2,7 +2,22 @@
     <div metal:fill-slot="content">
         <h3 class="left jumbotop">Order Manager :<hr></h3>
         <div class="jumbotron jumboGFB">
+            <div class="well GFB jumbosquish2">
+                <h5>View pending order's for :
+                    <form class="input-group contact-field hostform" method="POST" action="#">
+                        <input readonly="readonly" type="text" id="hs" class="form-control ">
+                        <input type="hidden" id="hsid" name="hsid" value="-1">
+                        <div id="HostSite" class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Host-Sites <span class="caret"></span></button>
+                            <ul tal:repeat="hostsite view.get_host_sites" class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a onclick="HostSite('${hostsite.name} - ${hostsite.address}','${hostsite.id}'); return false;" href="#">${hostsite.name}</a></li>
+                            </ul>
+                            <input type="submit" class="btn btn-default jumbobut btn-info pull-bottom acntbtn" role="button">Refresh</input>
+                        </div>
+                    </form>
+                </h5>
 
+            </div>
             <form>
                 <table class="table table-hover table-condensed">
                     <tbody>
@@ -31,6 +46,18 @@
             </form>
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Orders</a>
         </div>
-
+        <script type="text/jquery">
+        $(document).ready(function() {
+            
+          $(".clickableRow").click(function() {
+                
+                window.document.location = $(this).attr("href");
+          });
+          function HostSite(val,val2){
+            document.getElementById("hs").value = val;
+            document.getElementById("hsid".value = val2;
+        };
+        });
+    </script>
     </div>
 </div>
