@@ -46,5 +46,14 @@
             </form>
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="#" role="button">Add Orders</a>
         </div>
+        <script type="text/jquery">
+        $(document).ready(function() {
+            
+          $(".clickableRow").click(function() {
+                
+                window.document.location = $(this).attr("href");
+          });
+        });
+    </script>
     </div>
 </div>
