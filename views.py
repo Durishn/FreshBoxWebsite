@@ -72,3 +72,7 @@ class ProjectorViews(Layouts):
 	@view_config(renderer="templates/manage_sales.pt", name="sales")
 	def view_sales(self):
 		return {"page_title": "Manage Sales"}
+
+	@view_config(renderer="templates/edit_user_info.pt", name="editUser")
+	def view_editUser(self):
+		return {"page_title": "Edit User"}
