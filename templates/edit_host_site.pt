@@ -59,9 +59,27 @@
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="hostsites" role="button">Cancel</a>
             <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="hostsites" role="button">Save Changes</a>
         </div>
-        <script> 
-            function HostSite(val){
-                document.getElementById("hs").value = val;
+        <!-- Scripts -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/jquery">
+            $(document).ready(function() {
+                
+              $(".clickableRow").click(function() {
+                    
+                    window.document.location = $(this).attr("href");
+              });
+            });
+        </script>
+        <script>
+            function Province(val){
+                document.getElementById("province").value = val;
+            };
+        </script>
+        <script>
+            function UserType(val){
+                document.getElementById("user").value = val;
             };
         </script>
     </div>
