@@ -17,7 +17,7 @@
                 </tbody>
             </table>
             <h6 class="center"> * Click on table row, to edit element.</h6>
-            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="manage_host_sites" role="button">Add Account</a>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="manage_host_sites.pt" role="button">Add Account</a>
         </div>
     </div>
 </div>

@@ -12,7 +12,7 @@
                         <th class="userhead">Full Name</th>
                         <th class="userhead">Phone Number</th>
                     </tr>
-                    <tr tal:repeat="row view.get_users" class='usercell' onclick="window.document.location='edit_user_info';">
+                    <tr tal:repeat="row view.get_users" class='usercell' onclick="window.document.location='editUser';">
                         <td class="usercell">${row.credentials}</td>
                         <td class="usercell">${row.email}</td>
                         <td class="usercell">${row.first_name} ${row.last_name}</td>
@@ -21,7 +21,7 @@
                 </tbody>
             </table>
             <h6 class="center"> * Click on table row, to edit element.</h6>
-            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="edit_user_info" role="button">Add Account</a>
+            <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="editUser" role="button">Add Account</a>
         </div>
     </div>
 </div>

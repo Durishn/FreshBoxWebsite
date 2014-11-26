@@ -3,7 +3,7 @@
         <div class="jumbotron jumboGFB jumbotop">
             <h2 >What is Garden Fresh Box?</h2>
             <p> The Garden Fresh Box Program is a non-profit, fresh produce buying service created to help people access affordable fresh fruits and vegetables and also to support our local farmers. We are affiliated with the Guelph Wellington Local Food.</p>
-            <a class="btn btn-info btn-lg" href="about_us" role="button">Learn more</a>      
+            <a class="btn btn-info btn-lg" href="about" role="button">Learn more</a>      
         </div>
         <div class="jumbotron jumboGFB jumbomid">
             <h2>Help Us, Help Our Community.</h2>
