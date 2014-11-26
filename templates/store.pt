@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="well GFB">
-                    <h3>Pickup Information:<h3>
+                    <h3>Pickup Information:</h3>
                     <div class="input-group contact-field">
                         <input readonly="readonly" type="text" id="hs" class="form-control store ">
                         <div id="HostSite" class="input-group-btn">
@@ -115,7 +115,7 @@
                                 <li><a onclick="HostSite('${hostsite.name} - ${hostsite.address}'); return false;" href="#">${hostsite.name}</a></li>  
                             </ul> 
                         </div>
-                    </div><h5><a id="findbox" href="#findbox" class="GFB-link">Find the Host-Site closest to you!</a></h5>
+                    </div><h5><a id="findbox" target="_blank" href="http://batchgeo.com/map/d1c1926978f6426dbcd57d1f8f234de5" class="GFB-link">See Host-Site Locations!</a></h5>
                 </div>
                 
                 
