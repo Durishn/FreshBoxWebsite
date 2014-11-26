@@ -6,15 +6,15 @@
             <h3 class="left top">Host-Site Information :<br><h6 class="left">*Optional Fields</h6><hr></h3>
             <form>
                 <div class="input-group contact-field">
-                    <span class="input-group-addon IGA1">Site Name</span>
+                    <span class="input-group-addon IGA">Site Name</span>
                     <input type="text" class="form-control store" placeholder="Example Name">
                 </div>
                 <div class="input-group contact-field">
-                    <span class="input-group-addon IGA1">City:</span>
+                    <span class="input-group-addon IGA">City:</span>
                     <input type="text" class="form-control store" placeholder="Guelph">
                 </div>
                 <div class="input-group contact-field">
-                    <span class="input-group-addon IGA1">Postal Code:</span>
+                    <span class="input-group-addon IGA">Postal Code:</span>
                     <input type="text" class="form-control store" placeholder="N1H 3C4">
                 </div>
                 <div class="input-group contact-field1">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="input-group contact-field">
-                    <span class="input-group-addon IGA1">Address:</span>
+                    <span class="input-group-addon IGA">Address:</span>
                     <input type="text" class="form-control store" placeholder="35 Yewholme Dr.">
                 </div>
                 <div class="input-group contact-field1">
