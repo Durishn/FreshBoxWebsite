@@ -80,19 +80,19 @@ Author: Nic Durish
                             <th class="userhead">User Name</th>
                             <th class="userhead">Full Name</th>
                         </tr>
-                        <tr class='clickableRow usercell' href='#'>
+                        <tr class='usercell' onclick="window.open('GFB_User-Info.html');">
                             <td class="usercell">Coordinator</td>
                             <td class="usercell">NicD</td>
                             <td class="usercell">Nic Durish</td>
                         </tr>
-                        <tr class='clickableRow usercell' href='index.html'>
+                        <tr class='usercell' onclick="window.open('GFB_User-Info.html');">
                             <td class="usercell">Administrator</td>
                             <td class="usercell">DoeJ</td>
                             <td class="usercell">John Doe</td>
                         </tr>
                     </tbody>
                 </table>
-                <h6 class="center"> * Click on table row, to view or edit element information.</h6>
+                <h6 class="center">* Click on table row, to view or edit element information.</h6>
                 <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_User-Info.html" role="button">Add Account</a>
             </div>
 
@@ -114,5 +114,10 @@ Author: Nic Durish
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/jquery">  
+          $(".clickableRow").click(function() {
+                window.document.location = $(this).attr("href");
+          });
+    </script>
 </body>
 </html>
