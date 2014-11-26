@@ -169,6 +169,5 @@
                     document.getElementById("hs").value = val;
                 };
             </script>
-        </div>
     </div>
 </div>
