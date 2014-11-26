@@ -228,11 +228,11 @@ def getMenu(self):
 		retVal.append({'href':'logout','title': 'Logout'})
 		retVal.append({'href':'users','title': 'Manage Users'})
 		retVal.append({'href':'hostsites','title': 'Manage HostSites'})
-		retVal.append({'href':'orders','title': 'Manage Orders'})
+		retVal.append({'href':'sales','title': 'Manage Sales'})
 	elif (self.request.session['userType'] == 'Coordinator'):
 		retVal.append({'href':'logout','title': 'Logout'})
 		retVal.append({'href':'hostsites','title': 'Manage HostSites'})
-		retVal.append({'href':'orders','title': 'Manage Orders'})
+		retVal.append({'href':'sales','title': 'Manage Sales'})
 	else:
 		retVal.append({'href':'login','title': 'Staff Login', 'style':''})
 	return retVal
