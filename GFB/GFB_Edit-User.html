@@ -9,8 +9,8 @@ Author: Nic Durish
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GFB: User Info</title>
-    <meta name="description" content="User Info for Garden Fresh Box">
+    <title>GFB: Order Manager</title>
+    <meta name="description" content="Order Manager for Garden Fresh Box">
     <meat name="author" content="Fresh Solutions">
     
     <!-- Linked Files -->
@@ -69,12 +69,17 @@ Author: Nic Durish
 
             </div>
         </nav>
+        
+            <div class="jumbotron jumbosquish jumboGFB jumbomid ">
+                <div class="well GFB">
+                    <form>
+                    <h3>Edit User :<br><h3>
 
-        <!-- Main Page Content -->
-        <div class="container theme-showcase" role="main">
-            <div class="jumbotron jumboGFB jumbosquish jumbotop">
-                <h3 class="left top">New Sale :<br><h6 class="left">*Optional Fields</h6><hr></h3>
-                <form>
+                    <div class="input-group contact-field">
+                        <span class="input-group-addon IGA">Username:</span>
+                        <input type="text" class="form-control store" placeholder="John">
+                    </div>
+
                     <div class="input-group contact-field">
                         <span class="input-group-addon IGA">First Name:</span>
                         <input type="text" class="form-control store" placeholder="John">
@@ -92,21 +97,23 @@ Author: Nic Durish
                         <input type="text" class="form-control store" placeholder="(012) 345-6789">
                     </div>
                     <div class="input-group contact-field">
-                        <span class="input-group-addon IGA">Number of Small Boxes:</span>
-                        <input type="text" class="form-control store" placeholder="# of boxes">
+                        <span class="input-group-addon IGA">* User Type :</span>
+                        
+                        <select class="input-group contact-field">
+                          <option value="Coordinator" class="form-control store">Coordinator</option>
+                            <option value="Administrator" class="form-control store">Administrator</option>
+                        </select> 
                     </div>
-                    <div class="input-group contact-field">
-                        <span class="input-group-addon IGA">Number of Large Boxes:</span>
-                        <input type="text" class="form-control store" placeholder="# of boxes">
-                    </div>
-                </form>
-                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_Manage-Orders.html" role="button">Cancel</a>
-                <a class="btn btn-default jumbobut btn-info pull-bottom acntbtn" href="GFB_Manage-Orders.html" role="button">Save Changes</a>
-            </div>
+                    </form>                    
+                    <button type="button" class="btn btn-info btn-lg" padding="5px">Cancel</button>    
 
+                    <button type="button"  class="btn btn-info btn-lg" padding="5px">Submit</button>
+                </div>
+
+                
 
             <!-- Footer -->
-            <div class="footer">
+            <div class="footer" width="100">
                 <h3>Made possible with the help of:</h3>
                 <img class="sponsor" alt="Garden Fresh Box home logo" src="images/OHC.png">
                 <img class="sponsor" alt="Garden Fresh Box home logo" src="images/MCYS.png">
@@ -116,43 +123,27 @@ Author: Nic Durish
                 <p><small> Copyright &copy; FreshSolutions </small></p>
             </div>
         </div>
-    </div>
 
-    <!-- Modal Thank you for your donation -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h3 class="modal-title center" id="myModalLabel">The Garden Fresh Box Team</h3>
-                </div>
-                <div class="modal-body">
-                    <h4 class="center">Are you sure you want to mark this sale as paid/unpaid?</h4>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/jquery">
-        $(document).ready(function() {
-            
-          $(".clickableRow").click(function() {
-                
-                window.document.location = $(this).attr("href");
-          });
-        });
+    <script type="text/javascript">
+    function reply_click(element)
+    {
+        document.getElementById('product_name').value = element.getAttribute('data-product-name');
+    }   
+
+
+    function HostSite(val){
+        document.getElementById("hs").value = val;
+    } 
     </script>
-    <script>
-        function UserType(val){
-            document.getElementById("usertext").value = val;
-        };
-    </script>
+
 </body>
 </html>
+
+        
+        
