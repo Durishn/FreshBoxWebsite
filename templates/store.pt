@@ -1,7 +1,7 @@
 <div metal:use-macro="view.global_template">
     <div metal:fill-slot="content">
         <div class="jumbotron jumbosquish jumboGFB jumbotop">
-                <h1>Get a Garden Fresh Box<h1>
+                <h1>Get a Garden Fresh Box</h1>
                     <h2>What's in the box?</h2>
                 <div class="well GFB">
                     
@@ -81,7 +81,7 @@
 
             <div class="jumbotron jumbosquish jumboGFB jumbomid ">
                 <div class="well GFB">
-                    <h3>Contact Information:<br><h6>*Optional Fields</h6><h3>
+                    <h3>Contact Information:<br><h6>*Optional Fields</h6></h3>
                     <div class="input-group contact-field">
                         <span class="input-group-addon IGA">First Name:</span>
                         <input type="text" class="form-control store" placeholder="John">
@@ -100,7 +100,7 @@
                     </div>
                     <div class="checkbox">
                         <h5>
-                            <input type="checkbox" value="remember-me"> Recieve notifications one day prior to distribution date.
+                            <input type="checkbox" value="remember-me"> Receive notifications one day prior to distribution date.
                         </h5>
                     </div>
                 </div>
@@ -118,9 +118,8 @@
                     </div><h5><a id="findbox" target="_blank" href="http://batchgeo.com/map/d1c1926978f6426dbcd57d1f8f234de5" class="GFB-link">See Host-Site Locations!</a></h5>
                 </div>
                 
-                
                 <div class="well GFB">
-                    <h3>Product Information:<h3>
+                    <h3>Product Information:</h3>
                     <h5>Choose box quantity upon checkout.</h5>
                     <img class="img-circle logosmall" alt="Garden Fresh Box home logo" src="images/gfb_small.png">
                     <form id="GFBform" action="#GFBform" method="post" class="ppform">
@@ -161,13 +160,14 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-info btn-lg lower" border="0" name="Pay with PayPal" alt="PayPal - The safer, easier way to pay online!">Pay with PayPal</button>
-                    </form>  
+                    </form>   
                 </div>         
             </div>
             <script> 
-        function HostSite(val){
-            document.getElementById("hs").value = val;
-        };
-    </script>
+                function HostSite(val){
+                    document.getElementById("hs").value = val;
+                };
+            </script>
+        </div>
     </div>
 </div>
