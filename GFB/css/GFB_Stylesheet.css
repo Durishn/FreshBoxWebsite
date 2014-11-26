@@ -86,10 +86,11 @@ span.input-group-addon.IGA1 {
   margin-top: 5px;
 }
 
-.SIZE{
-  max-width:430px;
+.SIZE1{
+  max-width:330px;
   margin: 0 auto;
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .center{
